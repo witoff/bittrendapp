@@ -12,9 +12,10 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    NSLog(@"Starting Up");
   NSToolbar *toolbar = [[NSToolbar alloc] initWithIdentifier:@"bittrends"];
   [toolbar setDisplayMode:NSToolbarDisplayModeLabelOnly];
-  
+    NSLog(@"Done Starting!");
 }
 
 @end
