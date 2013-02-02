@@ -10,9 +10,8 @@
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-  
+- (void)applicationDidFinishLaunching:(NSNotification *)notification {
+  _statusItemViewController = [[BtStatusItemViewController alloc] init];
 }
 
 @end

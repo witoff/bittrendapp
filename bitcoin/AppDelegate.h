@@ -7,7 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "BtStatusItemViewController.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
+ @private
+  BtStatusItemViewController *_statusItemViewController;
+}
 
 @end
