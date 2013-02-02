@@ -12,8 +12,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-  NSToolbar *toolbar = [[NSToolbar alloc] initWithIdentifier:@"bittrends"];
-  [toolbar setDisplayMode:NSToolbarDisplayModeLabelOnly];
   
 }
 

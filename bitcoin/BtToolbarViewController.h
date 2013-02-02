@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BtToolbarViewController : NSObject
+@interface BtToolbarViewController : NSObject <NSToolbarDelegate> {
+ @private
+  NSToolbar *_toolbar;
+}
+
+- (id)init;
 
 @end

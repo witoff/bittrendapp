@@ -10,4 +10,14 @@
 
 @implementation BtToolbarViewController
 
+- (id)init {
+  self = [super init];
+  if (self) {
+    _toolbar = [[NSToolbar alloc] initWithIdentifier:@"bittrends"];
+    [_toolbar setDisplayMode:NSToolbarDisplayModeLabelOnly];
+    [_toolbar setDelegate:self];
+  }
+  return self;
+}
+
 @end
