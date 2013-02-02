@@ -13,7 +13,6 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
   NSLog(@"Starting Up");
   _statusItemViewController = [[BtStatusItemViewController alloc] init];
-  NSLog(@"Done Starting!");
 }
 
 @end

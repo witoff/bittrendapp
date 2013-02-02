@@ -14,21 +14,19 @@
   self = [super init];
   if (self) {
     _statusItem = [[NSStatusBar systemStatusBar]
-        statusItemWithLength:NSVariableStatusItemLength] ;
-    [_statusItem setTitle:@"$19.00"];
+        statusItemWithLength:NSVariableStatusItemLength];
     // TODO(kgk): Add dopdown menu on click to quit, etc.
     // [_statusItem setMenu:statusMenu];
     // [_statusItem setAction:@selector(menuClick:)];
 
-    _statusItemTextField =
-        [[NSTextField alloc] init];
-    [_statusItemTextField setStringValue:@"$19.00"];
-    [_statusItemTextField setBezeled:NO];
-    [_statusItemTextField setDrawsBackground:NO];
-    [_statusItemTextField setEditable:NO];
-    [_statusItemTextField setSelectable:NO];
-
-    [_statusItem setView:_statusItemTextField];
+    NSFont *stringFont = [NSFont fontWithName:@"Helvetica" size:15.0];
+    NSDictionary *titleAttributes =
+        [NSDictionary dictionaryWithObject:stringFont
+                                    forKey:NSFontAttributeName];
+    NSAttributedString *title =
+        [[NSAttributedString alloc] initWithString:@"19.00"
+                                        attributes:titleAttributes];
+    [_statusItem setAttributedTitle:title];
   }
   return self;
 }
