@@ -16,6 +16,7 @@
 		0A59E77B16BD9D2100E3CE3C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A59E75B16BD9D2100E3CE3C /* Cocoa.framework */; };
 		0A59E78316BD9D2100E3CE3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A59E78116BD9D2100E3CE3C /* InfoPlist.strings */; };
 		0A59E78616BD9D2100E3CE3C /* bitcoinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A59E78516BD9D2100E3CE3C /* bitcoinTests.m */; };
+		0AA6491C16BDA6FA00BEE4C9 /* BtToolbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA6491B16BDA6FA00BEE4C9 /* BtToolbarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		0A59E78216BD9D2100E3CE3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0A59E78416BD9D2100E3CE3C /* bitcoinTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bitcoinTests.h; sourceTree = "<group>"; };
 		0A59E78516BD9D2100E3CE3C /* bitcoinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bitcoinTests.m; sourceTree = "<group>"; };
+		0AA6491A16BDA6FA00BEE4C9 /* BtToolbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtToolbarViewController.h; sourceTree = "<group>"; };
+		0AA6491B16BDA6FA00BEE4C9 /* BtToolbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtToolbarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				0A59E76D16BD9D2100E3CE3C /* AppDelegate.h */,
 				0A59E76E16BD9D2100E3CE3C /* AppDelegate.m */,
 				0A59E76216BD9D2100E3CE3C /* Supporting Files */,
+				0AA6491A16BDA6FA00BEE4C9 /* BtToolbarViewController.h */,
+				0AA6491B16BDA6FA00BEE4C9 /* BtToolbarViewController.m */,
 			);
 			path = bitcoin;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			files = (
 				0A59E76816BD9D2100E3CE3C /* main.m in Sources */,
 				0A59E76F16BD9D2100E3CE3C /* AppDelegate.m in Sources */,
+				0AA6491C16BDA6FA00BEE4C9 /* BtToolbarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +440,7 @@
 				0A59E78B16BD9D2100E3CE3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A59E78C16BD9D2100E3CE3C /* Build configuration list for PBXNativeTarget "bitcoinTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +449,7 @@
 				0A59E78E16BD9D2100E3CE3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
