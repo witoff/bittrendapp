@@ -7,13 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BtStatusItemView.h"
 
 @interface BtStatusItemViewController : NSViewController {
  @private
   NSStatusItem *_statusItem;
-  NSTextField *_statusItemTextField;
+  BtStatusItemView *_statusItemView;
+  NSString *_statusItemText;
 }
 
 - (id)init;
+- (void)setText:(NSString *)text;
 
 @end

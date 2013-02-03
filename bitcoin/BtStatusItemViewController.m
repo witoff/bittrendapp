@@ -7,7 +7,6 @@
 //
 
 #import "BtStatusItemViewController.h"
-#import "BtStatusItemView.h"
 
 @implementation BtStatusItemViewController
 
@@ -16,11 +15,19 @@
   if (self) {
     _statusItem = [[NSStatusBar systemStatusBar]
         statusItemWithLength:NSVariableStatusItemLength];
-    BtStatusItemView *statusItemView =
-        [[BtStatusItemView alloc] initWithText:@"19.00"];
-    [_statusItem setView:statusItemView];
+    _statusItemText = @"19.00 ฿/$";
+    _statusItemView = [[BtStatusItemView alloc] initWithText:_statusItemText];
+    [_statusItem setView:_statusItemView];
   }
   return self;
+}
+
+- (void)setText:(NSString *)text {
+  if (text != _statusItemText) {
+    _statusItemText = [text copy];
+    [_statusItemView setText:text];
+    [_statusItemView sizeToFit];
+  }
 }
 
 @end

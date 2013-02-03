@@ -14,7 +14,7 @@
 }
 
 - (id)initWithText:(NSString *)text;
-
 - (void)setText:(NSString *)text;
+- (void)sizeToFit;
 
 @end

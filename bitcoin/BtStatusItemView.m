@@ -34,19 +34,18 @@
 - (void)setText:(NSString *)text {
   NSLog(@"Setting status item text to \"%@\"", text);
   [_textField setStringValue:text];
-  [self sizeToFit];
 }
 
 // Recalculate frame based on subviews.
 - (void)sizeToFit {
   [_textField sizeToFit];
   NSRect textFrame = [_textField frame];
-  NSRect selfFrame = textFrame;
-  selfFrame.size.height = [[NSStatusBar systemStatusBar] thickness];
-  [self setFrame:selfFrame];
+  CGFloat statusBarHeight = [[NSStatusBar systemStatusBar] thickness];
+  [self setFrame:NSMakeRect(0, 0, textFrame.size.width, statusBarHeight)];
   // It seems necessary to add 1 pixel because it is too low otherwise.
-  textFrame.origin.y +=
-      floor((selfFrame.size.height - textFrame.size.height) / 2) + 1;
+  textFrame.origin.y =
+      floor((statusBarHeight - textFrame.size.height) / 2) + 1;
+  textFrame.origin.x = 0;
   [_textField setFrame:textFrame];
 }
 
