@@ -42,7 +42,8 @@
   NSRect textFrame = [_textField frame];
   CGFloat statusBarHeight = [[NSStatusBar systemStatusBar] thickness];
   [self setFrame:NSMakeRect(0, 0, textFrame.size.width, statusBarHeight)];
-  // It seems necessary to add 1 pixel because it is too low otherwise.
+  // Center the _textField vertically in the status bar.
+  // It seems necessary to add 1 pixel because it is too low otherwise *shrug*
   textFrame.origin.y =
       floor((statusBarHeight - textFrame.size.height) / 2) + 1;
   textFrame.origin.x = 0;
