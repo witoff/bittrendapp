@@ -19,11 +19,7 @@
     [_textField setBordered:NO];
     [_textField setBezeled:NO];
     [_textField setBackgroundColor:[NSColor clearColor]];
-    // Use something other than the system font? Not just yet.
-    // NSFont *font =
-    //     [NSFont fontWithName:@"HelveticaNeueLTStd-Cn" size:16.0];
-    NSFont *font = [NSFont menuBarFontOfSize:0];
-    [_textField setFont:font];
+    [_textField setFont:[NSFont menuBarFontOfSize:0]];
     [_textField setStringValue:text];
     [self addSubview:_textField];
     [self sizeToFit];

@@ -15,7 +15,7 @@
   if (self) {
     _statusItem = [[NSStatusBar systemStatusBar]
         statusItemWithLength:NSVariableStatusItemLength];
-    _statusItemText = @"19.00 ฿/$";
+    _statusItemText = @"19.00";
     _statusItemView = [[BtStatusItemView alloc] initWithText:_statusItemText];
     [_statusItem setView:_statusItemView];
   }
