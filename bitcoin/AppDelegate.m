@@ -13,6 +13,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
   NSLog(@"Starting Up");
   _statusItemViewController = [[BtStatusItemViewController alloc] init];
+  _mtGoxSocketIOController = [[BtSocketIOController alloc] init];
 }
 
 @end

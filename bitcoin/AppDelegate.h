@@ -8,10 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 #import "BtStatusItemViewController.h"
+#import "BtSocketIOController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
  @private
   BtStatusItemViewController *_statusItemViewController;
+  BtSocketIOController *_mtGoxSocketIOController;
 }
 
 @end

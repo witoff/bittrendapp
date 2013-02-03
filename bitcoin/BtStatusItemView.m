@@ -20,7 +20,7 @@
     [_textField setBezeled:NO];
     [_textField setBackgroundColor:[NSColor clearColor]];
     [_textField setFont:[NSFont menuBarFontOfSize:0]];
-    [_textField setStringValue:text];
+    [self setText:text];
     [self addSubview:_textField];
     [self sizeToFit];
   }
