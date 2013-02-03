@@ -48,6 +48,8 @@
 		0682640C16BDAE7300C58306 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0682640716BDAE7300C58306 /* SRWebSocket.m */; };
 		0682640D16BDAE7300C58306 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0682640716BDAE7300C58306 /* SRWebSocket.m */; };
 		0682640F16BDAF0800C58306 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682640E16BDAF0800C58306 /* Security.framework */; };
+		0A50904516BDC409004174E2 /* HelveticaNeueLTStd-Cn.otf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A50904316BDC3DD004174E2 /* HelveticaNeueLTStd-Cn.otf */; };
+		0A50904816BDD274004174E2 /* BtStatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50904716BDD274004174E2 /* BtStatusItemView.m */; };
 		0A59E75C16BD9D2100E3CE3C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A59E75B16BD9D2100E3CE3C /* Cocoa.framework */; };
 		0A59E76616BD9D2100E3CE3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A59E76416BD9D2100E3CE3C /* InfoPlist.strings */; };
 		0A59E76816BD9D2100E3CE3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A59E76716BD9D2100E3CE3C /* main.m */; };
@@ -69,6 +71,19 @@
 			remoteInfo = bitcoin;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0A50903E16BDC129004174E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Fonts;
+			dstSubfolderSpec = 7;
+			files = (
+				0A50904516BDC409004174E2 /* HelveticaNeueLTStd-Cn.otf in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		068263B916BDADED00C58306 /* SocketIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIO.h; sourceTree = "<group>"; };
@@ -115,6 +130,9 @@
 		0682640616BDAE7300C58306 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
 		0682640716BDAE7300C58306 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
 		0682640E16BDAF0800C58306 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0A50904316BDC3DD004174E2 /* HelveticaNeueLTStd-Cn.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueLTStd-Cn.otf"; sourceTree = "<group>"; };
+		0A50904616BDD274004174E2 /* BtStatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtStatusItemView.h; sourceTree = "<group>"; };
+		0A50904716BDD274004174E2 /* BtStatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtStatusItemView.m; sourceTree = "<group>"; };
 		0A59E75716BD9D2100E3CE3C /* bitcoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bitcoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A59E75B16BD9D2100E3CE3C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0A59E75E16BD9D2100E3CE3C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -225,11 +243,45 @@
 			name = SocketRocket;
 			sourceTree = "<group>";
 		};
+		0A50902116BDBACC004174E2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0A50902316BDBAF3004174E2 /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0A50902316BDBAF3004174E2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0A50904316BDC3DD004174E2 /* HelveticaNeueLTStd-Cn.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		0A50904A16BDD28E004174E2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A50904616BDD274004174E2 /* BtStatusItemView.h */,
+				0A50904716BDD274004174E2 /* BtStatusItemView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0A50904C16BE0D5B004174E2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0AA6491A16BDA6FA00BEE4C9 /* BtStatusItemViewController.h */,
+				0AA6491B16BDA6FA00BEE4C9 /* BtStatusItemViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		0A59E74C16BD9D2100E3CE3C = {
 			isa = PBXGroup;
 			children = (
-				0682640E16BDAF0800C58306 /* Security.framework */,
 				0A59E76116BD9D2100E3CE3C /* bitcoin */,
+				0682640E16BDAF0800C58306 /* Security.framework */,
 				0A59E77E16BD9D2100E3CE3C /* bitcoinTests */,
 				0A59E75A16BD9D2100E3CE3C /* Frameworks */,
 				0A59E75816BD9D2100E3CE3C /* Products */,
@@ -269,11 +321,12 @@
 		0A59E76116BD9D2100E3CE3C /* bitcoin */ = {
 			isa = PBXGroup;
 			children = (
+				0A50904C16BE0D5B004174E2 /* ViewControllers */,
+				0A50904A16BDD28E004174E2 /* Views */,
+				0A50902116BDBACC004174E2 /* Resources */,
 				0A59E76D16BD9D2100E3CE3C /* AppDelegate.h */,
 				0A59E76E16BD9D2100E3CE3C /* AppDelegate.m */,
 				0A59E76216BD9D2100E3CE3C /* Supporting Files */,
-				0AA6491A16BDA6FA00BEE4C9 /* BtStatusItemViewController.h */,
-				0AA6491B16BDA6FA00BEE4C9 /* BtStatusItemViewController.m */,
 			);
 			path = bitcoin;
 			sourceTree = "<group>";
@@ -319,6 +372,7 @@
 				0A59E75316BD9D2100E3CE3C /* Sources */,
 				0A59E75416BD9D2100E3CE3C /* Frameworks */,
 				0A59E75516BD9D2100E3CE3C /* Resources */,
+				0A50903E16BDC129004174E2 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -439,6 +493,7 @@
 				0682640816BDAE7300C58306 /* base64.c in Sources */,
 				0682640A16BDAE7300C58306 /* NSData+SRB64Additions.m in Sources */,
 				0682640C16BDAE7300C58306 /* SRWebSocket.m in Sources */,
+				0A50904816BDD274004174E2 /* BtStatusItemView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

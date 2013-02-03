@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BtStatusItemViewController : NSObject <NSToolbarDelegate> {
+@interface BtStatusItemViewController : NSViewController {
  @private
   NSStatusItem *_statusItem;
   NSTextField *_statusItemTextField;

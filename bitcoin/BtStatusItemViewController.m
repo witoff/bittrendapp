@@ -7,6 +7,7 @@
 //
 
 #import "BtStatusItemViewController.h"
+#import "BtStatusItemView.h"
 
 @implementation BtStatusItemViewController
 
@@ -15,18 +16,9 @@
   if (self) {
     _statusItem = [[NSStatusBar systemStatusBar]
         statusItemWithLength:NSVariableStatusItemLength];
-    // TODO(kgk): Add dopdown menu on click to quit, etc.
-    // [_statusItem setMenu:statusMenu];
-    // [_statusItem setAction:@selector(menuClick:)];
-
-    NSFont *stringFont = [NSFont fontWithName:@"Helvetica" size:15.0];
-    NSDictionary *titleAttributes =
-        [NSDictionary dictionaryWithObject:stringFont
-                                    forKey:NSFontAttributeName];
-    NSAttributedString *title =
-        [[NSAttributedString alloc] initWithString:@"19.00"
-                                        attributes:titleAttributes];
-    [_statusItem setAttributedTitle:title];
+    BtStatusItemView *statusItemView =
+        [[BtStatusItemView alloc] initWithText:@"19.00"];
+    [_statusItem setView:statusItemView];
   }
   return self;
 }
