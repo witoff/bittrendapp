@@ -13,14 +13,17 @@
 - (id)init {
   self = [super init];
   if (self) {
-    NSString *host = @"socketio.mtgox.com/mtgox";
-    NSInteger port = 443;
     _socket = [[SocketIO alloc] initWithDelegate:self];
     [_socket setUseSecure:YES];
-    [_socket connectToHost:host onPort:port];
+    [_socket connectToHost:@"socketio.mtgox.com"
+                    onPort:443
+                withParams:nil
+             withNamespace:@"/mtgox"];
   }
   return self;
 }
+
+#pragma mark SocketIODelegate callbacks
 
 - (void)socketIODidConnect:(SocketIO *)socket {
   NSLog(@"SocketIO connected");

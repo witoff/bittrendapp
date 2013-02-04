@@ -22,6 +22,8 @@
   return self;
 }
 
+#pragma mark public interface
+
 - (void)setText:(NSString *)text {
   if (text != _statusItemText) {
     _statusItemText = [text copy];

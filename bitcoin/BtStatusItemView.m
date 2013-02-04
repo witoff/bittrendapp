@@ -27,6 +27,8 @@
   return self;
 }
 
+#pragma mark public interface
+
 - (void)setText:(NSString *)text {
   NSLog(@"Setting status item text to \"%@\"", text);
   [_textField setStringValue:text];
