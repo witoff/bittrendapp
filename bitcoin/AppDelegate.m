@@ -13,7 +13,11 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
   NSLog(@"Starting Up");
   _statusItemViewController = [[BtStatusItemViewController alloc] init];
-  _mtGoxSocketIOController = [[BtSocketIOController alloc] init];
+  _mtGoxApiController = [[BtMtGoxApiController alloc] initWithDelegate:self];
+}
+
+- (void)mtGoxPriceDidChangeTo:(NSString *)price {
+  [_statusItemViewController setText:price];
 }
 
 @end

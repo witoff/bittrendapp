@@ -30,7 +30,7 @@
 		0A50908F16BF2343004174E2 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A50907716BF2343004174E2 /* base64.c */; };
 		0A50909016BF2343004174E2 /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50907A16BF2343004174E2 /* NSData+SRB64Additions.m */; };
 		0A50909116BF2343004174E2 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50907C16BF2343004174E2 /* SRWebSocket.m */; };
-		0A50909416BF255C004174E2 /* BtSocketIOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50909316BF255C004174E2 /* BtSocketIOController.m */; };
+		0A50909416BF255C004174E2 /* BtMtGoxApiController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50909316BF255C004174E2 /* BtMtGoxApiController.m */; };
 		0A59E75C16BD9D2100E3CE3C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A59E75B16BD9D2100E3CE3C /* Cocoa.framework */; };
 		0A59E76616BD9D2100E3CE3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A59E76416BD9D2100E3CE3C /* InfoPlist.strings */; };
 		0A59E76816BD9D2100E3CE3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A59E76716BD9D2100E3CE3C /* main.m */; };
@@ -114,8 +114,8 @@
 		0A50907B16BF2343004174E2 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
 		0A50907C16BF2343004174E2 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
 		0A50907D16BF2343004174E2 /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
-		0A50909216BF255C004174E2 /* BtSocketIOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtSocketIOController.h; sourceTree = "<group>"; };
-		0A50909316BF255C004174E2 /* BtSocketIOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtSocketIOController.m; sourceTree = "<group>"; };
+		0A50909216BF255C004174E2 /* BtMtGoxApiController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtMtGoxApiController.h; sourceTree = "<group>"; };
+		0A50909316BF255C004174E2 /* BtMtGoxApiController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtMtGoxApiController.m; sourceTree = "<group>"; };
 		0A59E75716BD9D2100E3CE3C /* bitcoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bitcoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A59E75B16BD9D2100E3CE3C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0A59E75E16BD9D2100E3CE3C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -260,6 +260,13 @@
 			path = SocketRocket;
 			sourceTree = "<group>";
 		};
+		0A50909516BF3F42004174E2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		0A59E74C16BD9D2100E3CE3C = {
 			isa = PBXGroup;
 			children = (
@@ -304,14 +311,15 @@
 		0A59E76116BD9D2100E3CE3C /* bitcoin */ = {
 			isa = PBXGroup;
 			children = (
+				0A50909516BF3F42004174E2 /* Models */,
 				0A50904C16BE0D5B004174E2 /* ViewControllers */,
 				0A50904A16BDD28E004174E2 /* Views */,
 				0A50902116BDBACC004174E2 /* Resources */,
 				0A59E76D16BD9D2100E3CE3C /* AppDelegate.h */,
 				0A59E76E16BD9D2100E3CE3C /* AppDelegate.m */,
 				0A59E76216BD9D2100E3CE3C /* Supporting Files */,
-				0A50909216BF255C004174E2 /* BtSocketIOController.h */,
-				0A50909316BF255C004174E2 /* BtSocketIOController.m */,
+				0A50909216BF255C004174E2 /* BtMtGoxApiController.h */,
+				0A50909316BF255C004174E2 /* BtMtGoxApiController.m */,
 			);
 			path = bitcoin;
 			sourceTree = "<group>";
@@ -479,7 +487,7 @@
 				0A50908F16BF2343004174E2 /* base64.c in Sources */,
 				0A50909016BF2343004174E2 /* NSData+SRB64Additions.m in Sources */,
 				0A50909116BF2343004174E2 /* SRWebSocket.m in Sources */,
-				0A50909416BF255C004174E2 /* BtSocketIOController.m in Sources */,
+				0A50909416BF255C004174E2 /* BtMtGoxApiController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

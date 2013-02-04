@@ -15,7 +15,7 @@
   if (self) {
     _statusItem = [[NSStatusBar systemStatusBar]
         statusItemWithLength:NSVariableStatusItemLength];
-    _statusItemText = @"19.00";
+    _statusItemText = @"฿";
     _statusItemView = [[BtStatusItemView alloc] initWithText:_statusItemText];
     [_statusItem setView:_statusItemView];
   }
@@ -25,7 +25,7 @@
 #pragma mark public interface
 
 - (void)setText:(NSString *)text {
-  if (text != _statusItemText) {
+  if (![_statusItemText isEqualToString:text]) {
     _statusItemText = [text copy];
     [_statusItemView setText:text];
     [_statusItemView sizeToFit];
