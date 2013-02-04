@@ -79,7 +79,7 @@ static NSString *OPTYPE_RESULT = @"result";
     NSString *channelId = [jsonObject valueForKey:@"channel"];
     if ([channelId isEqualToString:CHANNELID_TICKER]) {
       displayPrice = [[[jsonObject valueForKey:@"ticker"]
-                                   valueForKey:@"avg"]
+                                   valueForKey:@"last"]
                                    valueForKey:@"display_short"];
     }
   }
