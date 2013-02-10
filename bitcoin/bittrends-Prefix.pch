@@ -1,0 +1,53 @@
+//
+// Prefix header for all source files of the 'bitcoin' target in the 'bitcoin' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
+
+
+/** SLOWLY PRINT EVERYTHING **/
+//#define LOG_VERBOSE 0
+
+#ifdef LOG_VERBOSE
+#define logVerbose( s, ... ) NSLog( @"<%p %@:%d (%@)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__,  NSStringFromSelector(_cmd), [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#else
+#define logVerbose( ... ) NSLog( __VA_ARGS__ )
+#endif
+
+
+/** QUICK HELPERS **/
+#define qString( ... ) [NSString stringWithFormat: __VA_ARGS__, nil ]
+#define qArray( ... ) [NSArray arrayWithObjects: __VA_ARGS__, nil ]
+#define qDict( ... ) [NSDictionary dictionaryWithObjectsAndKeys: __VA_ARGS__, nil ]
+
+/** LOG LEVELS **/
+#define LOG_LEVEL_ERROR
+#define LOG_LEVEL_WARN
+#define LOG_LEVEL_INFO
+#define LOG_LEVEL_DEBUG
+
+#ifdef LOG_LEVEL_ERROR
+#define logError( ... ) logVerbose( __VA_ARGS__ )
+#else
+#define logError( ... )
+#endif
+
+#ifdef LOG_LEVEL_WARN
+#define logWarn( ... ) logVerbose( __VA_ARGS__ )
+#else
+#define logWarn( ... )
+#endif
+
+#ifdef LOG_LEVEL_INFO
+#define logInfo(doLog, ... ) if (doLog) logVerbose( __VA_ARGS__ )
+#else
+#define logInfo( ... )
+#endif
+
+#ifdef LOG_LEVEL_DEBUG
+#define logDebug(doLog, ... ) if (doLog) logVerbose( __VA_ARGS__ )
+#else
+#define logDebug( ... )
+#endif

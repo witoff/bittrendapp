@@ -11,9 +11,14 @@
 #import "BtMtGoxApiController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate,BtMtGoxApiDelegate> {
- @private
-  BtStatusItemViewController *_statusItemViewController;
-  BtMtGoxApiController *_mtGoxApiController;
+@private
+    BtStatusItemViewController *_statusItemViewController;
+    BtMtGoxApiController *_mtGoxApiController;
+    bool _toggle;
+    
 }
+
+-(void)timerTicked:(NSTimer*)timer;
+-(void)connect:(NSTimer*)timer;
 
 @end

@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0657063D16C738F0003CED95 /* 512x512.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0657063C16C738F0003CED95 /* 512x512.icns */; };
 		0682640F16BDAF0800C58306 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682640E16BDAF0800C58306 /* Security.framework */; };
+		06876A3D16C6354B00D1C21A /* StartAtLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 06876A3C16C6354B00D1C21A /* StartAtLogin.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06876A4016C63EF700D1C21A /* BTMenuDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06876A3F16C63EF700D1C21A /* BTMenuDelegate.m */; };
 		0A50904516BDC409004174E2 /* HelveticaNeueLTStd-Cn.otf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A50904316BDC3DD004174E2 /* HelveticaNeueLTStd-Cn.otf */; };
 		0A50904816BDD274004174E2 /* BtStatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50904716BDD274004174E2 /* BtStatusItemView.m */; };
 		0A50907E16BF2343004174E2 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50905316BF2343004174E2 /* NSObject+SBJson.m */; };
@@ -67,7 +70,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		060C386216C73BCC00BAE98C /* bittrends.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = bittrends.entitlements; sourceTree = "<group>"; };
+		0657063C16C738F0003CED95 /* 512x512.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = 512x512.icns; sourceTree = "<group>"; };
 		0682640E16BDAF0800C58306 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		06876A3B16C6354B00D1C21A /* StartAtLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartAtLogin.h; sourceTree = "<group>"; };
+		06876A3C16C6354B00D1C21A /* StartAtLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartAtLogin.m; sourceTree = "<group>"; };
+		06876A3E16C63EF700D1C21A /* BTMenuDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTMenuDelegate.h; sourceTree = "<group>"; };
+		06876A3F16C63EF700D1C21A /* BTMenuDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTMenuDelegate.m; sourceTree = "<group>"; };
 		0A50904316BDC3DD004174E2 /* HelveticaNeueLTStd-Cn.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueLTStd-Cn.otf"; sourceTree = "<group>"; };
 		0A50904616BDD274004174E2 /* BtStatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtStatusItemView.h; sourceTree = "<group>"; };
 		0A50904716BDD274004174E2 /* BtStatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtStatusItemView.m; sourceTree = "<group>"; };
@@ -116,21 +125,21 @@
 		0A50907D16BF2343004174E2 /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
 		0A50909216BF255C004174E2 /* BtMtGoxApiController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtMtGoxApiController.h; sourceTree = "<group>"; };
 		0A50909316BF255C004174E2 /* BtMtGoxApiController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtMtGoxApiController.m; sourceTree = "<group>"; };
-		0A59E75716BD9D2100E3CE3C /* bitcoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bitcoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A59E75716BD9D2100E3CE3C /* bittrends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bittrends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A59E75B16BD9D2100E3CE3C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0A59E75E16BD9D2100E3CE3C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		0A59E75F16BD9D2100E3CE3C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0A59E76016BD9D2100E3CE3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0A59E76316BD9D2100E3CE3C /* bitcoin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "bitcoin-Info.plist"; sourceTree = "<group>"; };
+		0A59E76316BD9D2100E3CE3C /* bittrends.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = bittrends.plist; sourceTree = "<group>"; };
 		0A59E76516BD9D2100E3CE3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0A59E76716BD9D2100E3CE3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0A59E76916BD9D2100E3CE3C /* bitcoin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bitcoin-Prefix.pch"; sourceTree = "<group>"; };
+		0A59E76916BD9D2100E3CE3C /* bittrends-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bittrends-Prefix.pch"; sourceTree = "<group>"; };
 		0A59E76B16BD9D2100E3CE3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		0A59E76D16BD9D2100E3CE3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A59E76E16BD9D2100E3CE3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0A59E77816BD9D2100E3CE3C /* bitcoinTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bitcoinTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A59E77816BD9D2100E3CE3C /* bittrendsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bittrendsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A59E77916BD9D2100E3CE3C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		0A59E78016BD9D2100E3CE3C /* bitcoinTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "bitcoinTests-Info.plist"; sourceTree = "<group>"; };
+		0A59E78016BD9D2100E3CE3C /* bittrends.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = bittrends.plist; sourceTree = "<group>"; };
 		0A59E78216BD9D2100E3CE3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0A59E78416BD9D2100E3CE3C /* bitcoinTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bitcoinTests.h; sourceTree = "<group>"; };
 		0A59E78516BD9D2100E3CE3C /* bitcoinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bitcoinTests.m; sourceTree = "<group>"; };
@@ -190,6 +199,10 @@
 			children = (
 				0AA6491A16BDA6FA00BEE4C9 /* BtStatusItemViewController.h */,
 				0AA6491B16BDA6FA00BEE4C9 /* BtStatusItemViewController.m */,
+				06876A3B16C6354B00D1C21A /* StartAtLogin.h */,
+				06876A3C16C6354B00D1C21A /* StartAtLogin.m */,
+				06876A3E16C63EF700D1C21A /* BTMenuDelegate.h */,
+				06876A3F16C63EF700D1C21A /* BTMenuDelegate.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -270,6 +283,8 @@
 		0A59E74C16BD9D2100E3CE3C = {
 			isa = PBXGroup;
 			children = (
+				060C386216C73BCC00BAE98C /* bittrends.entitlements */,
+				0657063C16C738F0003CED95 /* 512x512.icns */,
 				0A59E76116BD9D2100E3CE3C /* bitcoin */,
 				0682640E16BDAF0800C58306 /* Security.framework */,
 				0A59E77E16BD9D2100E3CE3C /* bitcoinTests */,
@@ -281,8 +296,8 @@
 		0A59E75816BD9D2100E3CE3C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0A59E75716BD9D2100E3CE3C /* bitcoin.app */,
-				0A59E77816BD9D2100E3CE3C /* bitcoinTests.octest */,
+				0A59E75716BD9D2100E3CE3C /* bittrends.app */,
+				0A59E77816BD9D2100E3CE3C /* bittrendsTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -327,10 +342,10 @@
 		0A59E76216BD9D2100E3CE3C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0A59E76316BD9D2100E3CE3C /* bitcoin-Info.plist */,
+				0A59E76316BD9D2100E3CE3C /* bittrends.plist */,
 				0A59E76416BD9D2100E3CE3C /* InfoPlist.strings */,
 				0A59E76716BD9D2100E3CE3C /* main.m */,
-				0A59E76916BD9D2100E3CE3C /* bitcoin-Prefix.pch */,
+				0A59E76916BD9D2100E3CE3C /* bittrends-Prefix.pch */,
 				0A59E76A16BD9D2100E3CE3C /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -349,7 +364,7 @@
 		0A59E77F16BD9D2100E3CE3C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0A59E78016BD9D2100E3CE3C /* bitcoinTests-Info.plist */,
+				0A59E78016BD9D2100E3CE3C /* bittrends.plist */,
 				0A59E78116BD9D2100E3CE3C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -358,9 +373,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0A59E75616BD9D2100E3CE3C /* bitcoin */ = {
+		0A59E75616BD9D2100E3CE3C /* bittrends */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0A59E78916BD9D2100E3CE3C /* Build configuration list for PBXNativeTarget "bitcoin" */;
+			buildConfigurationList = 0A59E78916BD9D2100E3CE3C /* Build configuration list for PBXNativeTarget "bittrends" */;
 			buildPhases = (
 				0A59E75316BD9D2100E3CE3C /* Sources */,
 				0A59E75416BD9D2100E3CE3C /* Frameworks */,
@@ -371,14 +386,14 @@
 			);
 			dependencies = (
 			);
-			name = bitcoin;
+			name = bittrends;
 			productName = bitcoin;
-			productReference = 0A59E75716BD9D2100E3CE3C /* bitcoin.app */;
+			productReference = 0A59E75716BD9D2100E3CE3C /* bittrends.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0A59E77716BD9D2100E3CE3C /* bitcoinTests */ = {
+		0A59E77716BD9D2100E3CE3C /* bittrendsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0A59E78C16BD9D2100E3CE3C /* Build configuration list for PBXNativeTarget "bitcoinTests" */;
+			buildConfigurationList = 0A59E78C16BD9D2100E3CE3C /* Build configuration list for PBXNativeTarget "bittrendsTests" */;
 			buildPhases = (
 				0A59E77316BD9D2100E3CE3C /* Sources */,
 				0A59E77416BD9D2100E3CE3C /* Frameworks */,
@@ -390,9 +405,9 @@
 			dependencies = (
 				0A59E77D16BD9D2100E3CE3C /* PBXTargetDependency */,
 			);
-			name = bitcoinTests;
+			name = bittrendsTests;
 			productName = bitcoinTests;
-			productReference = 0A59E77816BD9D2100E3CE3C /* bitcoinTests.octest */;
+			productReference = 0A59E77816BD9D2100E3CE3C /* bittrendsTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -404,7 +419,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Kevin Greene";
 			};
-			buildConfigurationList = 0A59E75116BD9D2100E3CE3C /* Build configuration list for PBXProject "bitcoin" */;
+			buildConfigurationList = 0A59E75116BD9D2100E3CE3C /* Build configuration list for PBXProject "robbittrends" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -416,8 +431,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0A59E75616BD9D2100E3CE3C /* bitcoin */,
-				0A59E77716BD9D2100E3CE3C /* bitcoinTests */,
+				0A59E75616BD9D2100E3CE3C /* bittrends */,
+				0A59E77716BD9D2100E3CE3C /* bittrendsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -429,6 +444,7 @@
 			files = (
 				0A59E76616BD9D2100E3CE3C /* InfoPlist.strings in Resources */,
 				0A59E76C16BD9D2100E3CE3C /* Credits.rtf in Resources */,
+				0657063D16C738F0003CED95 /* 512x512.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +504,8 @@
 				0A50909016BF2343004174E2 /* NSData+SRB64Additions.m in Sources */,
 				0A50909116BF2343004174E2 /* SRWebSocket.m in Sources */,
 				0A50909416BF255C004174E2 /* BtMtGoxApiController.m in Sources */,
+				06876A3D16C6354B00D1C21A /* StartAtLogin.m in Sources */,
+				06876A4016C63EF700D1C21A /* BTMenuDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,7 +522,7 @@
 /* Begin PBXTargetDependency section */
 		0A59E77D16BD9D2100E3CE3C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0A59E75616BD9D2100E3CE3C /* bitcoin */;
+			target = 0A59E75616BD9D2100E3CE3C /* bittrends */;
 			targetProxy = 0A59E77C16BD9D2100E3CE3C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -593,11 +611,13 @@
 		0A59E78A16BD9D2100E3CE3C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = bittrends.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "bitcoin/bitcoin-Prefix.pch";
-				INFOPLIST_FILE = "bitcoin/bitcoin-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "bitcoin/bittrends-Prefix.pch";
+				INFOPLIST_FILE = bitcoin/bittrends.plist;
+				PRODUCT_NAME = bittrends;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -605,11 +625,13 @@
 		0A59E78B16BD9D2100E3CE3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = bittrends.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "bitcoin/bitcoin-Prefix.pch";
-				INFOPLIST_FILE = "bitcoin/bitcoin-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "bitcoin/bittrends-Prefix.pch";
+				INFOPLIST_FILE = bitcoin/bittrends.plist;
+				PRODUCT_NAME = bittrends;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -622,8 +644,8 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bitcoin/bitcoin-Prefix.pch";
-				INFOPLIST_FILE = "bitcoinTests/bitcoinTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "bitcoinTests/bittrends-Info.plist";
+				PRODUCT_NAME = bittrendsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -637,8 +659,8 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bitcoin/bitcoin-Prefix.pch";
-				INFOPLIST_FILE = "bitcoinTests/bitcoinTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "bitcoinTests/bittrends-Info.plist";
+				PRODUCT_NAME = bittrendsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -647,7 +669,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0A59E75116BD9D2100E3CE3C /* Build configuration list for PBXProject "bitcoin" */ = {
+		0A59E75116BD9D2100E3CE3C /* Build configuration list for PBXProject "robbittrends" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0A59E78716BD9D2100E3CE3C /* Debug */,
@@ -656,7 +678,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0A59E78916BD9D2100E3CE3C /* Build configuration list for PBXNativeTarget "bitcoin" */ = {
+		0A59E78916BD9D2100E3CE3C /* Build configuration list for PBXNativeTarget "bittrends" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0A59E78A16BD9D2100E3CE3C /* Debug */,
@@ -665,7 +687,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0A59E78C16BD9D2100E3CE3C /* Build configuration list for PBXNativeTarget "bitcoinTests" */ = {
+		0A59E78C16BD9D2100E3CE3C /* Build configuration list for PBXNativeTarget "bittrendsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0A59E78D16BD9D2100E3CE3C /* Debug */,

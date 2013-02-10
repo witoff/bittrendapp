@@ -26,69 +26,78 @@ static NSString *OPTYPE_RESULT = @"result";
 @implementation BtMtGoxApiController
 
 - (id)initWithDelegate:(NSObject<BtMtGoxApiDelegate> *)delegate {
-  self = [super init];
-  if (self) {
-    DEBUGMTGOXAPI_LOG(@"MtGox SocketIO connecting...");
-    _delegate = delegate;
-    _socket = [[SocketIO alloc] initWithDelegate:self];
-    [_socket setUseSecure:YES];
-    [_socket connectToHost:@"socketio.mtgox.com"
-                    onPort:443
-                withParams:nil
-             withNamespace:@"/mtgox"];
-  }
-  return self;
+    self = [super init];
+    if (self) {
+        logInfo(DEBUGMTGOXAPI, @"MtGox SocketIO connecting...");
+        _delegate = delegate;
+        _socket = [[SocketIO alloc] initWithDelegate:self];
+        [_socket setUseSecure:YES];
+        [_socket connectToHost:@"socketio.mtgox.com"
+                        onPort:443
+                    withParams:nil
+                 withNamespace:@"/mtgox"];
+    }
+    return self;
 }
 
 #pragma mark SocketIODelegate callbacks
 
 - (void)socketIODidConnect:(SocketIO *)socket {
-  DEBUGMTGOXAPI_LOG(@"MtGox SocketIO connected");
+    logInfo(DEBUGMTGOXAPI, @"MtGox SocketIO connected");
 }
 
 - (void)socketIODidDisconnect:(SocketIO *)socket
         disconnectedWithError:(NSError *)error {
-  if (!error) {
-    DEBUGMTGOXAPI_LOG(@"MtGox SocketIO disconnected");
-  } else {
-    DEBUGMTGOXAPI_LOG(@"MtGox SocketIO disconnected with error \"%@\"",
-        [error localizedDescription]);
-  }
+    if (!error) {
+        logWarn(@"MtGox SocketIO disconnected");
+    } else {
+        logError(@"MtGox SocketIO disconnected with error \"%@\"",
+                          [error localizedDescription]);
+    }
+    
+    //Let Delegate know that we're broken
+    [_delegate mtGoxDidDisconnect];
 }
 
 - (void)socketIO:(SocketIO *)socket didReceiveJSON:(SocketIOPacket *)packet {
-  DEBUGMTGOXAPI_DATA_LOG(@"MtGox SocketIO received JSON %@", packet.data);
-  [self parseJSONResponse:[packet dataAsJSON]];
+    logInfo(DEBUGMTGOXAPI_DATA, @"MtGox SocketIO received JSON %@", packet.data);
+    [self parseJSONResponse:[packet dataAsJSON]];
 }
 
 - (void)socketIO:(SocketIO *)socket onError:(NSError *)error {
-  NSLog(@"MtGox SocketIO error \"%@\"", [error localizedDescription]);
+    logError(@"MtGox SocketIO error \"%@\"", [error localizedDescription]);
+    [_delegate mtGoxDidDisconnect];
 }
 
 #pragma mark Private Methods
 
 - (NSString *)parseJSONResponse:(NSDictionary *)jsonObject {
-  if (!jsonObject) {
-    return nil;
-  }
-  NSString *displayPrice = nil;
-
-  // TODO(kgk): Handle all operation types and channel ids.
-  NSString *operationType = [jsonObject valueForKey:@"op"];
-  if ([operationType isEqualToString:OPTYPE_PRIVATE]) {
-    NSString *channelId = [jsonObject valueForKey:@"channel"];
-    if ([channelId isEqualToString:CHANNELID_TICKER]) {
-      displayPrice = [[[jsonObject valueForKey:@"ticker"]
-                                   valueForKey:@"last"]
-                                   valueForKey:@"display_short"];
+    if (!jsonObject) {
+        return nil;
     }
-  }
+    NSString *displayPrice = nil;
+    
+    // TODO(kgk): Handle all operation types and channel ids.
+    NSString *operationType = [jsonObject valueForKey:@"op"];
+    if ([operationType isEqualToString:OPTYPE_PRIVATE]) {
+        NSString *channelId = [jsonObject valueForKey:@"channel"];
+        if ([channelId isEqualToString:CHANNELID_TICKER]) {
+            displayPrice = [[[jsonObject valueForKey:@"ticker"]
+                             valueForKey:@"last"]
+                            valueForKey:@"display_short"];
+        }
+    }
+    
+    if (displayPrice &&
+        [_delegate respondsToSelector:@selector(mtGoxPriceDidChangeTo:)]) {
+        [_delegate mtGoxPriceDidChangeTo:displayPrice];
+    }
+    return nil;
+}
 
-  if (displayPrice &&
-      [_delegate respondsToSelector:@selector(mtGoxPriceDidChangeTo:)]) {
-    [_delegate mtGoxPriceDidChangeTo:displayPrice];
-  }
-  return nil;
+- (void)invalidate {
+    _delegate = nil;
+    [_socket disconnect];
 }
 
 @end

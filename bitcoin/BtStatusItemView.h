@@ -9,12 +9,22 @@
 #import <Cocoa/Cocoa.h>
 
 @interface BtStatusItemView : NSView {
- @private
-  NSTextField *_textField;
+@private
+    NSTextField *_textField;
+    NSDate *_lastUpdated;
+    BOOL _isHighlighted;
+    NSStatusItem *_statusItem;
+    NSColor *textColor;
+    
 }
 
-- (id)initWithText:(NSString *)text;
+@property (nonatomic, retain) NSColor *textColor;
+
+- (id)initWithText:(NSString *)text andStatusItem:(NSStatusItem*)item;
 - (void)setText:(NSString *)text;
 - (void)sizeToFit;
+-(void)setHighlight:(BOOL)isHighlighted;
+-(NSDate*)lastUpdated;
+-(void)setTextAlpha:(CGFloat)alpha doAnimate:(BOOL)doAnimate;
 
 @end
