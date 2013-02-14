@@ -13,7 +13,7 @@
 
 @synthesize textColor;
 
-- (id)initWithText:(NSString *)text andStatusItem:(NSStatusItem *)item {
+- (id)initWithPrice:(NSString *)price andStatusItem:(NSStatusItem *)item {
     self = [super init];
     if (self) {
         _lastUpdated = [[NSDate alloc] init];
@@ -30,7 +30,7 @@
         self.textColor = [NSColor blackColor];
         
         [self addSubview:_textField];
-        [self setText:text];
+        [self setPrice:price];
     }
     return self;
 }
@@ -56,7 +56,7 @@
     [self setNeedsDisplay:YES];
 }
 
-- (void) drawRect:(NSRect) rect {
+- (void)drawRect:(NSRect) rect {
     if (_isHighlighted) {
         [_textField setTextColor:[NSColor whiteColor]];
         [[NSColor selectedMenuItemColor] set];
@@ -67,17 +67,7 @@
     }
 }
 
--(NSDate *)lastUpdated {
-    return [_lastUpdated copy];
-}
-
-- (void)setText:(NSString *)text {
-    NSString *formatted = [NSString stringWithFormat:@"%@/฿", text];
-    NSLog(@"Setting status item text to \"%@\"", formatted);
-    [_textField setStringValue:formatted];
-    
-    [self sizeToFit];
-
+- (void)setLastUpdatedTime:(NSDate *)time {
     // Set Tooltip
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"EEEE, h:mm:ssa"];
@@ -94,7 +84,14 @@
     [self setTextAlpha:.55 doAnimate:YES];
 }
 
--(void)setTextAlpha:(CGFloat)alpha doAnimate:(BOOL)doAnimate {
+- (void)setPrice:(NSString *)price {
+    NSString *formatted = [NSString stringWithFormat:@"%@/฿", price];
+    NSLog(@"Setting status item text to \"%@\"", formatted);
+    [_textField setStringValue:formatted];
+    [self sizeToFit];
+}
+
+- (void)setTextAlpha:(CGFloat)alpha doAnimate:(BOOL)doAnimate {
     if (doAnimate) {
         [NSAnimationContext beginGrouping];
         [[NSAnimationContext currentContext] setDuration:1.1];

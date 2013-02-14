@@ -13,21 +13,21 @@
 @private
     NSStatusItem *_statusItem;
     BtStatusItemView *_statusItemView;
-    NSString *_statusItemText;
+    NSString *_price;
     NSMenu *_menu;
     id _menuDelegate;
-    
     NSMenuItem *_miLastUpdated;
     NSMenuItem *_miStartup;
-    
+    NSTimer *_lastUpdatedTimer;
+    NSDate *_priceLastUpdated;
 }
 
 - (id)init;
-- (void)setText:(NSString *)text;
+- (void)mtGoxPriceDidChangeTo:(NSString *)text;
 - (void)toggleStartup;
 - (void)quit;
 
-/* Set Text to Red */
+// Set Text to Red.
 - (void)setWarning;
 - (void)cancelWarning;
 

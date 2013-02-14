@@ -27,7 +27,7 @@
 
 #pragma mark MtGOX DELEGATE
 - (void)mtGoxPriceDidChangeTo:(NSString *)price {
-    [_statusItemViewController setText:price];
+    [_statusItemViewController mtGoxPriceDidChangeTo:price];
 }
 
 - (void)mtGoxDidDisconnect {

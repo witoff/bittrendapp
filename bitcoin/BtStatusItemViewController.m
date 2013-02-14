@@ -17,30 +17,31 @@
     if (self) {
         _statusItem = [[NSStatusBar systemStatusBar]
                        statusItemWithLength:NSVariableStatusItemLength];
-        _statusItemText = @"฿";
-        _statusItemView = [[BtStatusItemView alloc] initWithText:_statusItemText
-                                                   andStatusItem: _statusItem];
-
-        [self addMenu];
-        [NSMenu setMenuBarVisible:YES];
-
+        _price = @"฿";
+        _statusItemView = [[BtStatusItemView alloc] initWithPrice:_price
+                                                    andStatusItem:_statusItem];
         [_statusItem setView:_statusItemView];
+        [self createMenu];
+        [NSMenu setMenuBarVisible:YES];
     }
     return self;
 }
 
--(void)addMenu {
+-(void)createMenu {
     logDebug(0, @"adding menu");
 
-    //Create the Menu
+    // Create the Menu.
     _menu = [[NSMenu alloc] initWithTitle:@"title"];
     [_menu setDelegate:self];
 
-    _miLastUpdated = [[NSMenuItem alloc] initWithTitle:@"Updated @ ..." action:@selector(toggleStartup) keyEquivalent:@""];
+    _miLastUpdated = [[NSMenuItem alloc] initWithTitle:@"Updated @ ..."
+                                                action:@selector(toggleStartup)
+                                         keyEquivalent:@""];
     [_menu addItem:_miLastUpdated];
-    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerTicked:) userInfo:nil repeats:YES];
 
-    _miStartup = [[NSMenuItem alloc] initWithTitle:@"Run On Startup" action:@selector(toggleStartup) keyEquivalent:@""];
+    _miStartup = [[NSMenuItem alloc] initWithTitle:@"Run On Startup"
+                                            action:@selector(toggleStartup)
+                                     keyEquivalent:@""];
     [_miStartup setTarget:self];
 
     BtStartAtLoginController *login = [[BtStartAtLoginController alloc] init];
@@ -50,7 +51,9 @@
         [_miStartup setState:NSOffState];
     [_menu addItem:_miStartup];
 
-    NSMenuItem *miQuit = [[NSMenuItem alloc] initWithTitle:@"Quit" action:@selector(quit) keyEquivalent:@""];
+    NSMenuItem *miQuit = [[NSMenuItem alloc] initWithTitle:@"Quit"
+                                                    action:@selector(quit)
+                                             keyEquivalent:@""];
     [miQuit setTarget:self];
     [_menu addItem:miQuit];
 
@@ -59,29 +62,14 @@
     [_statusItem setMenu:_menu];
 }
 
--(void)timerTicked:(NSTimer*)timer {
-    logInfo(0, @"ticking");
-    NSDate *now = [[NSDate alloc] init];
-    float deltaSeconds = [now timeIntervalSinceDate:_statusItemView.lastUpdated];
-    _miLastUpdated.title = [NSString stringWithFormat:@"Updated %.2fs ago", deltaSeconds];
-    
-    
-    // Fade out even more when starts getting stale.  
-    if (floor(deltaSeconds) == 60)
-        [_statusItemView setTextAlpha:.4 doAnimate:YES];
-    if (floor(deltaSeconds) == 90)
-        [_statusItemView setTextAlpha:.2 doAnimate:YES];
-}
-
-#pragma mark public interface
+#pragma mark Public Interface
 
 - (void)toggleStartup {
     BtStartAtLoginController *login = [[BtStartAtLoginController alloc] init];
-    
+
     bool state = _miStartup.state==NSOnState;
     [login setStartAtLogin:!state];
-    
-    
+
     if ([login willStartAtLogin])
         [_miStartup setState:NSOnState];
     else
@@ -90,23 +78,28 @@
 }
 
 -(void)menuWillOpen:(NSMenu *)menu {
-    logInfo(1, @"Menu will open");
+    NSAssert([NSThread isMainThread], @"Must run on the main thread");
     [_statusItemView setHighlight:YES];
+    [self updateUpdatedLastMenuText];
+    [self startLastUpdatedTimer];
 }
 
 -(void)menuDidClose:(NSMenu *)menu {
-    logInfo(1, @"Menu Closed");
+    NSAssert([NSThread isMainThread], @"Must run on the main thread");
     [_statusItemView setHighlight:NO];
+    [self stopLastUpdatedTimer];
 }
 
 - (void)quit {
     [NSApp terminate:self];
 }
 
-- (void)setText:(NSString *)text {
-    if (![_statusItemText isEqualToString:text]) {
-        _statusItemText = [text copy];
-        [_statusItemView setText:text];
+- (void)mtGoxPriceDidChangeTo:(NSString *)price {
+    _priceLastUpdated = [[NSDate alloc] init];
+    [_statusItemView setLastUpdatedTime:_priceLastUpdated];
+    if (![_price isEqualToString:price]) {
+        _price = [price copy];
+        [_statusItemView setPrice:price];
     }
 }
 
@@ -120,10 +113,42 @@
 }
 - (void)cancelWarning {
     logInfo(1, @"Canceling Warning");
-    
+
     // Canceling Warning.
     _statusItemView.textColor = [NSColor blackColor];
     [_statusItemView setNeedsDisplay:YES];
+}
+
+#pragma mark Private Methods
+
+- (void)updateUpdatedLastMenuText {
+    NSDate *now = [[NSDate alloc] init];
+    float deltaSeconds = [now timeIntervalSinceDate:_priceLastUpdated];
+    _miLastUpdated.title =
+        [NSString stringWithFormat:@"Updated %.1fs ago", deltaSeconds];
+}
+
+- (void)lastUpdatedTimerTicked:(NSTimer *)timer {
+    [self updateUpdatedLastMenuText];
+}
+
+- (void)startLastUpdatedTimer {
+    [self stopLastUpdatedTimer];
+    _lastUpdatedTimer =
+        [NSTimer scheduledTimerWithTimeInterval:1.0
+                                         target:self
+                                       selector:@selector(lastUpdatedTimerTicked:)
+                                       userInfo:nil
+                                        repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:_lastUpdatedTimer
+                                 forMode:NSRunLoopCommonModes];
+}
+
+- (void)stopLastUpdatedTimer {
+    if (_lastUpdatedTimer) {
+        [_lastUpdatedTimer invalidate];
+        _lastUpdatedTimer = nil;
+    }
 }
 
 @end

@@ -19,6 +19,6 @@
 }
 
 -(void)timerTicked:(NSTimer*)timer;
--(void)connect:(NSTimer*)timer;
+-(void)connectToMtGox:(NSTimer*)timer;
 
 @end

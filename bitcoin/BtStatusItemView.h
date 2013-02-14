@@ -20,11 +20,11 @@
 
 @property (nonatomic, retain) NSColor *textColor;
 
-- (id)initWithText:(NSString *)text andStatusItem:(NSStatusItem*)item;
-- (void)setText:(NSString *)text;
+- (id)initWithPrice:(NSString *)price andStatusItem:(NSStatusItem*)item;
+- (void)setPrice:(NSString *)price;
 - (void)sizeToFit;
--(void)setHighlight:(BOOL)isHighlighted;
--(NSDate*)lastUpdated;
--(void)setTextAlpha:(CGFloat)alpha doAnimate:(BOOL)doAnimate;
+- (void)setHighlight:(BOOL)isHighlighted;
+- (void)setLastUpdatedTime:(NSDate *)time;
+- (void)setTextAlpha:(CGFloat)alpha doAnimate:(BOOL)doAnimate;
 
 @end
