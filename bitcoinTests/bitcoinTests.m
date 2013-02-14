@@ -3,29 +3,26 @@
 //  bitcoinTests
 //
 //  Created by Kevin Greene on 2/2/13.
-//  Copyright (c) 2013 Kevin Greene. All rights reserved.
+//  Copyright (c) 2013 Kevin Greene & Rob Witoff. All rights reserved.
 //
 
 #import "bitcoinTests.h"
 
 @implementation bitcoinTests
 
-- (void)setUp
-{
+- (void)setUp {
     [super setUp];
     
     // Set-up code here.
 }
 
-- (void)tearDown
-{
+- (void)tearDown {
     // Tear-down code here.
     
     [super tearDown];
 }
 
-- (void)testExample
-{
+- (void)testExample {
     STFail(@"Unit tests are not implemented yet in bitcoinTests");
 }
 

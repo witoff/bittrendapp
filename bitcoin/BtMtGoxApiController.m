@@ -3,7 +3,7 @@
 //  bitcoin
 //
 //  Created by Kevin Greene on 2/3/13.
-//  Copyright (c) 2013 Kevin Greene. All rights reserved.
+//  Copyright (c) 2013 Kevin Greene & Rob Witoff. All rights reserved.
 //
 
 #import "BtMtGoxApiController.h"
@@ -18,7 +18,7 @@ static NSString *OPTYPE_SUBSCRIBE   = @"subscribe";
 static NSString *OPTYPE_UNSUBSCRIBE = @"unsubscribe";
 // A server message, usually a warning.
 static NSString *OPTYPE_REMARK = @"remark";
-//The operation for depth, trade, and ticker messages.
+// The operation for depth, trade, and ticker messages.
 static NSString *OPTYPE_PRIVATE = @"private";
 // The response for op:call operations.
 static NSString *OPTYPE_RESULT = @"result";
@@ -55,7 +55,7 @@ static NSString *OPTYPE_RESULT = @"result";
                           [error localizedDescription]);
     }
     
-    //Let Delegate know that we're broken
+    // Let Delegate know that we're broken.
     [_delegate mtGoxDidDisconnect];
 }
 
@@ -77,17 +77,17 @@ static NSString *OPTYPE_RESULT = @"result";
     }
     NSString *displayPrice = nil;
     
-    // TODO(kgk): Handle all operation types and channel ids.
+    // TODO(kgreenek): Handle all operation types and channel ids.
     NSString *operationType = [jsonObject valueForKey:@"op"];
     if ([operationType isEqualToString:OPTYPE_PRIVATE]) {
         NSString *channelId = [jsonObject valueForKey:@"channel"];
         if ([channelId isEqualToString:CHANNELID_TICKER]) {
             displayPrice = [[[jsonObject valueForKey:@"ticker"]
-                             valueForKey:@"last"]
-                            valueForKey:@"display_short"];
+                                         valueForKey:@"last"]
+                                         valueForKey:@"display_short"];
         }
     }
-    
+
     if (displayPrice &&
         [_delegate respondsToSelector:@selector(mtGoxPriceDidChangeTo:)]) {
         [_delegate mtGoxPriceDidChangeTo:displayPrice];

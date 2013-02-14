@@ -1,40 +1,36 @@
 //
-//  StartAtLogin.m
+//  BtStartAtLoginController.m
 //  bitcoin
 //
 //  Created by Robert Witoff on 2/8/13.
-//  Copyright (c) 2013 Kevin Greene. All rights reserved.
+//  Copyright (c) 2013 Kevin Greene & Rob Witoff. All rights reserved.
 //
 
-#import "StartAtLogin.h"
+#import "BtStartAtLoginController.h"
 
-@interface StartAtLogin(private)
+@interface BtStartAtLoginController(private)
+
 - (NSURL *)appURL;
+
 @end
 
-@implementation StartAtLogin
+@implementation BtStartAtLoginController
 
-- (NSURL *)appURL
-{
+- (NSURL *)appURL {
     return [NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]];
 }
 
-- (BOOL)willStartAtLogin
-{
-    return [StartAtLogin willStartAtLogin:[self appURL]];
+- (BOOL)willStartAtLogin {
+    return [BtStartAtLoginController willStartAtLogin:[self appURL]];
 }
 
-- (void)setStartAtLogin:(BOOL)enabled
-{
+- (void)setStartAtLogin:(BOOL)enabled {
     [self willChangeValueForKey:@"startAtLogin"];
-    [StartAtLogin setStartAtLogin:[self appURL] enabled:enabled];
+    [BtStartAtLoginController setStartAtLogin:[self appURL] enabled:enabled];
     [self didChangeValueForKey:@"startAtLogin"];
 }
 
-
-
-+ (BOOL) willStartAtLogin:(NSURL *)itemURL
-{
++ (BOOL) willStartAtLogin:(NSURL *)itemURL {
     Boolean foundIt=false;
     LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
     if (loginItems) {
@@ -59,9 +55,8 @@
     return (BOOL)foundIt;
 }
 
-+ (void) setStartAtLogin:(NSURL *)itemURL enabled:(BOOL)enabled
-{
-    //OSStatus status;
++ (void) setStartAtLogin:(NSURL *)itemURL enabled:(BOOL)enabled {
+    // OSStatus status;
     LSSharedFileListItemRef existingItem = NULL;
     
     LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
@@ -95,4 +90,5 @@
         CFRelease(loginItems);
     }       
 }
+
 @end
