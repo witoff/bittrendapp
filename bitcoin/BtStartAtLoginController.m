@@ -57,10 +57,12 @@
 
 + (void) setStartAtLogin:(NSURL *)itemURL enabled:(BOOL)enabled {
     // OSStatus status;
+    logDebug(YES, @"setstart %d", enabled);
+
     LSSharedFileListItemRef existingItem = NULL;
-    
     LSSharedFileListRef loginItems = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
     if (loginItems) {
+        logInfo(YES, @"login items found");
         UInt32 seed = 0U;
         NSArray *currentLoginItems = [NSMakeCollectable(LSSharedFileListCopySnapshot(loginItems, &seed)) autorelease];
         for (id itemObject in currentLoginItems) {
@@ -74,18 +76,27 @@
                 CFRelease(URL);
                 
                 if (foundIt) {
+                    logDebug(YES, @"existing item was found.  Breaking");
                     existingItem = item;
                     break;
                 }
             }
+            else {
+                logWarn(@"Error found in file list resolution");
+            }
+                
         }
         
         if (enabled && (existingItem == NULL)) {
+            logDebug(YES, @"Inserting new item into file list");
             LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst,
                                           NULL, NULL, (CFURLRef)itemURL, NULL, NULL);
             
         } else if (!enabled && (existingItem != NULL))
             LSSharedFileListItemRemove(loginItems, existingItem);
+        else {
+            logWarn(@"Existing Item was not matched");
+        }
         
         CFRelease(loginItems);
     }       
