@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06415E431707C3510085BD37 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06415E421707C3510085BD37 /* ServiceManagement.framework */; };
 		0657063D16C738F0003CED95 /* 512x512.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0657063C16C738F0003CED95 /* 512x512.icns */; };
 		0682640F16BDAF0800C58306 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682640E16BDAF0800C58306 /* Security.framework */; };
-		06876A3D16C6354B00D1C21A /* BtStartAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06876A3C16C6354B00D1C21A /* BtStartAtLoginController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		06876A3D16C6354B00D1C21A /* BtStartAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06876A3C16C6354B00D1C21A /* BtStartAtLoginController.m */; };
 		06876A4016C63EF700D1C21A /* BtMenuDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06876A3F16C63EF700D1C21A /* BtMenuDelegate.m */; };
 		0A35A21716CCCA640016F838 /* BtStatusItemViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A35A21616CCCA640016F838 /* BtStatusItemViewControllerTest.m */; };
 		0A35A21916CCCA870016F838 /* BtStartAtLoginControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A35A21816CCCA870016F838 /* BtStartAtLoginControllerTest.m */; };
@@ -74,6 +75,7 @@
 
 /* Begin PBXFileReference section */
 		060C386216C73BCC00BAE98C /* bittrends.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = bittrends.entitlements; sourceTree = "<group>"; };
+		06415E421707C3510085BD37 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		0657063C16C738F0003CED95 /* 512x512.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = 512x512.icns; sourceTree = "<group>"; };
 		0682640E16BDAF0800C58306 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		06876A3B16C6354B00D1C21A /* BtStartAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtStartAtLoginController.h; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06415E431707C3510085BD37 /* ServiceManagement.framework in Frameworks */,
 				0682640F16BDAF0800C58306 /* Security.framework in Frameworks */,
 				0A59E75C16BD9D2100E3CE3C /* Cocoa.framework in Frameworks */,
 			);
@@ -291,6 +294,7 @@
 		0A59E74C16BD9D2100E3CE3C = {
 			isa = PBXGroup;
 			children = (
+				06415E421707C3510085BD37 /* ServiceManagement.framework */,
 				060C386216C73BCC00BAE98C /* bittrends.entitlements */,
 				0657063C16C738F0003CED95 /* 512x512.icns */,
 				0A59E76116BD9D2100E3CE3C /* bitcoin */,
@@ -428,7 +432,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Kevin Greene";
 			};
-			buildConfigurationList = 0A59E75116BD9D2100E3CE3C /* Build configuration list for PBXProject "robbittrends" */;
+			buildConfigurationList = 0A59E75116BD9D2100E3CE3C /* Build configuration list for PBXProject "bittrends" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -624,7 +628,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = bittrends.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bitcoin/bittrends-Prefix.pch";
@@ -639,7 +642,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = bittrends.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bitcoin/bittrends-Prefix.pch";
@@ -683,7 +685,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0A59E75116BD9D2100E3CE3C /* Build configuration list for PBXProject "robbittrends" */ = {
+		0A59E75116BD9D2100E3CE3C /* Build configuration list for PBXProject "bittrends" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0A59E78716BD9D2100E3CE3C /* Debug */,
