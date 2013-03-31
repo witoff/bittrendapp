@@ -81,9 +81,9 @@
      */
     
     /* LINKS */
-    [_menu addItem:[self getLinkMenu]];
+    //[_menu addItem:[self getLinkMenu]];
     
-    [_menu addItem:[NSMenuItem separatorItem]];
+    //[_menu addItem:[NSMenuItem separatorItem]];
     
     
     /* START ON LOGIN */

@@ -23,10 +23,10 @@
 #define qDict( ... ) [NSDictionary dictionaryWithObjectsAndKeys: __VA_ARGS__, nil ]
 
 /** LOG LEVELS **/
-#define LOG_LEVEL_ERROR
+//#define LOG_LEVEL_DEBUG
+//#define LOG_LEVEL_INFO
 #define LOG_LEVEL_WARN
-#define LOG_LEVEL_INFO
-#define LOG_LEVEL_DEBUG
+#define LOG_LEVEL_ERROR
 
 #ifdef LOG_LEVEL_ERROR
 #define logError( ... ) logVerbose( __VA_ARGS__ )
