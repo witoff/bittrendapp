@@ -14,7 +14,7 @@
 
 @protocol BtMtGoxApiDelegate
 
-- (void)mtGoxPriceDidChangeTo:(NSString *)price;
+- (void)mtGoxDataDidChangeTo:(NSDictionary*)data;
 - (void)mtGoxDidDisconnect;
 
 @end

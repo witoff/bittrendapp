@@ -13,7 +13,7 @@
 
 @synthesize textColor;
 
-- (id)initWithPrice:(NSString *)price andStatusItem:(NSStatusItem *)item {
+- (id)initWithPriceData:(NSDictionary *)priceData andStatusItem:(NSStatusItem *)item {
     self = [super init];
     if (self) {
         _lastUpdated = [[NSDate alloc] init];
@@ -30,7 +30,7 @@
         self.textColor = [NSColor blackColor];
         
         [self addSubview:_textField];
-        [self setPrice:price];
+        [self setPrice:[priceData valueForKey:@"last"]];
     }
     return self;
 }
@@ -78,10 +78,6 @@
     [self setToolTip:updated];
     _lastUpdated = now;
     logInfo(1, @"Setting tooltip to: %@", updated);
-
-    // Slowly fade out to indicate staleness
-    [self setTextAlpha:1 doAnimate:NO];
-    [self setTextAlpha:.55 doAnimate:YES];
 }
 
 - (void)setPrice:(NSString *)price {
@@ -89,6 +85,10 @@
     NSLog(@"Setting status item text to \"%@\"", formatted);
     [_textField setStringValue:formatted];
     [self sizeToFit];
+    
+    // Slowly fade out to indicate staleness
+    [self setTextAlpha:1 doAnimate:NO];
+    [self setTextAlpha:.55 doAnimate:YES];
 }
 
 - (void)setTextAlpha:(CGFloat)alpha doAnimate:(BOOL)doAnimate {

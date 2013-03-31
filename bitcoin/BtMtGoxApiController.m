@@ -52,7 +52,7 @@ static NSString *OPTYPE_RESULT = @"result";
         logWarn(@"MtGox SocketIO disconnected");
     } else {
         logError(@"MtGox SocketIO disconnected with error \"%@\"",
-                          [error localizedDescription]);
+                 [error localizedDescription]);
     }
     
     // Let Delegate know that we're broken.
@@ -75,22 +75,41 @@ static NSString *OPTYPE_RESULT = @"result";
     if (!jsonObject) {
         return nil;
     }
-    NSString *displayPrice = nil;
+    
+    
+    NSString *displayLow = nil;
+    NSString *displayHigh = nil;
+    NSString *displayBuy = nil;
+    NSString *displayLast = nil;
+    NSString *displaySell = nil;
+    
     
     // TODO(kgreenek): Handle all operation types and channel ids.
     NSString *operationType = [jsonObject valueForKey:@"op"];
     if ([operationType isEqualToString:OPTYPE_PRIVATE]) {
         NSString *channelId = [jsonObject valueForKey:@"channel"];
         if ([channelId isEqualToString:CHANNELID_TICKER]) {
-            displayPrice = [[[jsonObject valueForKey:@"ticker"]
-                                         valueForKey:@"last"]
-                                         valueForKey:@"display_short"];
+            displayLast = [[[jsonObject valueForKey:@"ticker"]
+                            valueForKey:@"last"]
+                           valueForKey:@"display_short"];
+            displayLow = [[[jsonObject valueForKey:@"ticker"]
+                           valueForKey:@"low"]
+                          valueForKey:@"display_short"];
+            displayHigh = [[[jsonObject valueForKey:@"ticker"]
+                            valueForKey:@"high"]
+                           valueForKey:@"display_short"];
+            displayBuy = [[[jsonObject valueForKey:@"ticker"]
+                           valueForKey:@"buy"]
+                          valueForKey:@"display_short"];
+            displaySell = [[[jsonObject valueForKey:@"ticker"]
+                            valueForKey:@"sell"]
+                           valueForKey:@"display_short"];
         }
     }
-
-    if (displayPrice &&
-        [_delegate respondsToSelector:@selector(mtGoxPriceDidChangeTo:)]) {
-        [_delegate mtGoxPriceDidChangeTo:displayPrice];
+    
+    if (displayLow && displayHigh && displayBuy && displayLast && displaySell &&
+        [_delegate respondsToSelector:@selector(mtGoxDataDidChangeTo:)]) {
+        [_delegate mtGoxDataDidChangeTo:qDict(displayLow, @"low", displayHigh, @"high", displayBuy, @"buy", displayLast, @"last", displaySell, @"sell")];
     }
     return nil;
 }

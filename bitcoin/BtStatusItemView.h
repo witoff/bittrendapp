@@ -20,7 +20,7 @@
 
 @property (nonatomic, retain) NSColor *textColor;
 
-- (id)initWithPrice:(NSString *)price andStatusItem:(NSStatusItem*)item;
+- (id)initWithPriceData:(NSDictionary *)priceData andStatusItem:(NSStatusItem*)item;
 - (void)setPrice:(NSString *)price;
 - (void)sizeToFit;
 - (void)setHighlight:(BOOL)isHighlighted;

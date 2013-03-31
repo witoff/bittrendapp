@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0603878B1707C6E6004FF3F2 /* bittrendsHelper.app in Copy Launch Helper */ = {isa = PBXBuildFile; fileRef = 060387891707C66A004FF3F2 /* bittrendsHelper.app */; };
 		06415E431707C3510085BD37 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06415E421707C3510085BD37 /* ServiceManagement.framework */; };
 		0657063D16C738F0003CED95 /* 512x512.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0657063C16C738F0003CED95 /* 512x512.icns */; };
 		0682640F16BDAF0800C58306 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0682640E16BDAF0800C58306 /* Security.framework */; };
@@ -51,6 +52,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		060387881707C66A004FF3F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 060387841707C669004FF3F2 /* bittrendsHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 060387641707C669004FF3F2;
+			remoteInfo = bittrendsHelper;
+		};
 		0A59E77C16BD9D2100E3CE3C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0A59E74E16BD9D2100E3CE3C /* Project object */;
@@ -61,6 +69,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		0603878A1707C6BE004FF3F2 /* Copy Launch Helper */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				0603878B1707C6E6004FF3F2 /* bittrendsHelper.app in Copy Launch Helper */,
+			);
+			name = "Copy Launch Helper";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0A50903E16BDC129004174E2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -74,6 +93,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		060387841707C669004FF3F2 /* bittrendsHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = bittrendsHelper.xcodeproj; path = bittrendsHelper/bittrendsHelper.xcodeproj; sourceTree = "<group>"; };
 		060C386216C73BCC00BAE98C /* bittrends.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = bittrends.entitlements; sourceTree = "<group>"; };
 		06415E421707C3510085BD37 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		0657063C16C738F0003CED95 /* 512x512.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = 512x512.icns; sourceTree = "<group>"; };
@@ -178,6 +198,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		060387851707C669004FF3F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				060387891707C66A004FF3F2 /* bittrendsHelper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0A50902116BDBACC004174E2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,12 +236,12 @@
 			children = (
 				0AA6491A16BDA6FA00BEE4C9 /* BtStatusItemViewController.h */,
 				0AA6491B16BDA6FA00BEE4C9 /* BtStatusItemViewController.m */,
+				0A35A21616CCCA640016F838 /* BtStatusItemViewControllerTest.m */,
 				06876A3B16C6354B00D1C21A /* BtStartAtLoginController.h */,
 				06876A3C16C6354B00D1C21A /* BtStartAtLoginController.m */,
 				0A35A21816CCCA870016F838 /* BtStartAtLoginControllerTest.m */,
 				06876A3E16C63EF700D1C21A /* BtMenuDelegate.h */,
 				06876A3F16C63EF700D1C21A /* BtMenuDelegate.m */,
-				0A35A21616CCCA640016F838 /* BtStatusItemViewControllerTest.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -294,6 +322,7 @@
 		0A59E74C16BD9D2100E3CE3C = {
 			isa = PBXGroup;
 			children = (
+				060387841707C669004FF3F2 /* bittrendsHelper.xcodeproj */,
 				06415E421707C3510085BD37 /* ServiceManagement.framework */,
 				060C386216C73BCC00BAE98C /* bittrends.entitlements */,
 				0657063C16C738F0003CED95 /* 512x512.icns */,
@@ -394,6 +423,7 @@
 				0A59E75416BD9D2100E3CE3C /* Frameworks */,
 				0A59E75516BD9D2100E3CE3C /* Resources */,
 				0A50903E16BDC129004174E2 /* CopyFiles */,
+				0603878A1707C6BE004FF3F2 /* Copy Launch Helper */,
 			);
 			buildRules = (
 			);
@@ -442,6 +472,12 @@
 			mainGroup = 0A59E74C16BD9D2100E3CE3C;
 			productRefGroup = 0A59E75816BD9D2100E3CE3C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 060387851707C669004FF3F2 /* Products */;
+					ProjectRef = 060387841707C669004FF3F2 /* bittrendsHelper.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0A59E75616BD9D2100E3CE3C /* bittrends */,
@@ -449,6 +485,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		060387891707C66A004FF3F2 /* bittrendsHelper.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = bittrendsHelper.app;
+			remoteRef = 060387881707C66A004FF3F2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0A59E75516BD9D2100E3CE3C /* Resources */ = {
@@ -595,9 +641,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
 			};
 			name = Debug;
 		};
@@ -619,8 +666,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
 			};
 			name = Release;
 		};
@@ -628,6 +676,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = bittrends.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bitcoin/bittrends-Prefix.pch";
@@ -642,7 +691,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = bittrends.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bitcoin/bittrends-Prefix.pch";
 				INFOPLIST_FILE = bitcoin/bittrends.plist;

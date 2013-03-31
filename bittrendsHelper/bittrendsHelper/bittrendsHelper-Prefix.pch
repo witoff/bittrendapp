@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'bittrendsHelper' target in the 'bittrendsHelper' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

@@ -20,14 +20,14 @@
 
 - (void)timerTicked:(NSTimer*)timer {
     logDebug(DEBUG_MTGOX, @"ticking");
-    [self mtGoxPriceDidChangeTo:(_toggle ? @"1.00" : @"2.00")];
+    [self mtGoxDataDidChangeTo:qDict((_toggle ? @"1.00" : @"2.00"), @"last")];
     _toggle = !_toggle;
 }
 
 
 #pragma mark MtGOX DELEGATE
-- (void)mtGoxPriceDidChangeTo:(NSString *)price {
-    [_statusItemViewController mtGoxPriceDidChangeTo:price];
+- (void)mtGoxDataDidChangeTo:(NSDictionary *)data {
+    [_statusItemViewController mtGoxDataDidChangeTo:data];
 }
 
 - (void)mtGoxDidDisconnect {
