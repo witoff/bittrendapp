@@ -18,7 +18,7 @@
         _priceLastUpdated = nil;
         _statusItem = [[NSStatusBar systemStatusBar]
                        statusItemWithLength:NSVariableStatusItemLength];
-        _lastPriceData = qDict(@"฿", @"last");
+        _lastPriceData = qDict(@"Ł", @"last");
         _statusItemView = [[BtStatusItemView alloc] initWithPriceData:_lastPriceData
                                                         andStatusItem:_statusItem];
         [_statusItem setView:_statusItemView];
@@ -222,7 +222,7 @@
     NSString *newPrice = [newData valueForKey:[self getTickerKey]];
     _lastPriceData = [newData copy];  //TODO: Deep Copy
     
-    if (![oldPrice isEqualToString:newPrice]) {
+    if (oldPrice != newPrice) {
         [self updateStatusItem];
     }
     else {

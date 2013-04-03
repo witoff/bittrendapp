@@ -81,7 +81,7 @@
 }
 
 - (void)setPrice:(NSString *)price {
-    NSString *formatted = [NSString stringWithFormat:@"%@/฿", price];
+    NSString *formatted = [NSString stringWithFormat:@"%@/Ł", price];
     NSLog(@"Setting status item text to \"%@\"", formatted);
     [_textField setStringValue:formatted];
     [self sizeToFit];

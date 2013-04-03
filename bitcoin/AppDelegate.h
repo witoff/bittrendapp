@@ -8,17 +8,16 @@
 
 #import <Cocoa/Cocoa.h>
 #import "BtStatusItemViewController.h"
-#import "BtMtGoxApiController.h"
+#import "BtceApiController.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate,BtMtGoxApiDelegate> {
+@interface AppDelegate : NSObject <NSApplicationDelegate,BtceApiDelegate> {
 @private
     BtStatusItemViewController *_statusItemViewController;
-    BtMtGoxApiController *_mtGoxApiController;
+    BtceApiController *_btce;
     bool _toggle;
     
 }
 
--(void)timerTicked:(NSTimer*)timer;
--(void)connectToMtGox:(NSTimer*)timer;
+- (void)pollBtce:(NSTimer*)timer;
 
 @end

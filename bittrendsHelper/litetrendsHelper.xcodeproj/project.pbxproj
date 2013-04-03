@@ -16,20 +16,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		060387641707C669004FF3F2 /* bittrendsHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bittrendsHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		060387641707C669004FF3F2 /* litetrendsHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = litetrendsHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		060387671707C669004FF3F2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0603876A1707C669004FF3F2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		0603876B1707C669004FF3F2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0603876C1707C669004FF3F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0603876F1707C669004FF3F2 /* bittrendsHelper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "bittrendsHelper-Info.plist"; sourceTree = "<group>"; };
+		0603876F1707C669004FF3F2 /* litetrendsHelper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "litetrendsHelper-Info.plist"; sourceTree = "<group>"; };
 		060387711707C669004FF3F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		060387731707C669004FF3F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		060387751707C669004FF3F2 /* bittrendsHelper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bittrendsHelper-Prefix.pch"; sourceTree = "<group>"; };
+		060387751707C669004FF3F2 /* litetrendsHelper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "litetrendsHelper-Prefix.pch"; sourceTree = "<group>"; };
 		060387771707C669004FF3F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		060387791707C669004FF3F2 /* BthAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BthAppDelegate.h; sourceTree = "<group>"; };
 		0603877A1707C669004FF3F2 /* BthAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BthAppDelegate.m; sourceTree = "<group>"; };
 		0603877D1707C669004FF3F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		0603878C1707CA15004FF3F2 /* bittrendsHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = bittrendsHelper.entitlements; sourceTree = "<group>"; };
+		0603878C1707CA15004FF3F2 /* litetrendsHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = litetrendsHelper.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +47,7 @@
 		0603875B1707C669004FF3F2 = {
 			isa = PBXGroup;
 			children = (
-				0603876D1707C669004FF3F2 /* bittrendsHelper */,
+				0603876D1707C669004FF3F2 /* litetrendsHelper */,
 				060387661707C669004FF3F2 /* Frameworks */,
 				060387651707C669004FF3F2 /* Products */,
 			);
@@ -56,7 +56,7 @@
 		060387651707C669004FF3F2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				060387641707C669004FF3F2 /* bittrendsHelper.app */,
+				060387641707C669004FF3F2 /* litetrendsHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,25 +80,26 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		0603876D1707C669004FF3F2 /* bittrendsHelper */ = {
+		0603876D1707C669004FF3F2 /* litetrendsHelper */ = {
 			isa = PBXGroup;
 			children = (
-				0603878C1707CA15004FF3F2 /* bittrendsHelper.entitlements */,
+				0603878C1707CA15004FF3F2 /* litetrendsHelper.entitlements */,
 				060387791707C669004FF3F2 /* BthAppDelegate.h */,
 				0603877A1707C669004FF3F2 /* BthAppDelegate.m */,
 				0603877C1707C669004FF3F2 /* MainMenu.xib */,
 				0603876E1707C669004FF3F2 /* Supporting Files */,
 			);
+			name = litetrendsHelper;
 			path = bittrendsHelper;
 			sourceTree = "<group>";
 		};
 		0603876E1707C669004FF3F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0603876F1707C669004FF3F2 /* bittrendsHelper-Info.plist */,
+				0603876F1707C669004FF3F2 /* litetrendsHelper-Info.plist */,
 				060387701707C669004FF3F2 /* InfoPlist.strings */,
 				060387731707C669004FF3F2 /* main.m */,
-				060387751707C669004FF3F2 /* bittrendsHelper-Prefix.pch */,
+				060387751707C669004FF3F2 /* litetrendsHelper-Prefix.pch */,
 				060387761707C669004FF3F2 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -107,9 +108,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		060387631707C669004FF3F2 /* bittrendsHelper */ = {
+		060387631707C669004FF3F2 /* litetrendsHelper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 060387811707C669004FF3F2 /* Build configuration list for PBXNativeTarget "bittrendsHelper" */;
+			buildConfigurationList = 060387811707C669004FF3F2 /* Build configuration list for PBXNativeTarget "litetrendsHelper" */;
 			buildPhases = (
 				060387601707C669004FF3F2 /* Sources */,
 				060387611707C669004FF3F2 /* Frameworks */,
@@ -119,9 +120,9 @@
 			);
 			dependencies = (
 			);
-			name = bittrendsHelper;
+			name = litetrendsHelper;
 			productName = bittrendsHelper;
-			productReference = 060387641707C669004FF3F2 /* bittrendsHelper.app */;
+			productReference = 060387641707C669004FF3F2 /* litetrendsHelper.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -134,7 +135,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Robert Witoff";
 			};
-			buildConfigurationList = 0603875F1707C669004FF3F2 /* Build configuration list for PBXProject "bittrendsHelper" */;
+			buildConfigurationList = 0603875F1707C669004FF3F2 /* Build configuration list for PBXProject "litetrendsHelper" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -146,7 +147,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				060387631707C669004FF3F2 /* bittrendsHelper */,
+				060387631707C669004FF3F2 /* litetrendsHelper */,
 			);
 		};
 /* End PBXProject section */
@@ -266,14 +267,14 @@
 		060387821707C669004FF3F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = bittrendsHelper/bittrendsHelper.entitlements;
+				CODE_SIGN_ENTITLEMENTS = bittrendsHelper/litetrendsHelper.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "bittrendsHelper/bittrendsHelper-Prefix.pch";
-				INFOPLIST_FILE = "bittrendsHelper/bittrendsHelper-Info.plist";
+				GCC_PREFIX_HEADER = "bittrendsHelper/litetrendsHelper-Prefix.pch";
+				INFOPLIST_FILE = "bittrendsHelper/litetrendsHelper-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = litetrendsHelper;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -282,14 +283,14 @@
 		060387831707C669004FF3F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = bittrendsHelper/bittrendsHelper.entitlements;
+				CODE_SIGN_ENTITLEMENTS = bittrendsHelper/litetrendsHelper.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "bittrendsHelper/bittrendsHelper-Prefix.pch";
-				INFOPLIST_FILE = "bittrendsHelper/bittrendsHelper-Info.plist";
+				GCC_PREFIX_HEADER = "bittrendsHelper/litetrendsHelper-Prefix.pch";
+				INFOPLIST_FILE = "bittrendsHelper/litetrendsHelper-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = litetrendsHelper;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -298,7 +299,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0603875F1707C669004FF3F2 /* Build configuration list for PBXProject "bittrendsHelper" */ = {
+		0603875F1707C669004FF3F2 /* Build configuration list for PBXProject "litetrendsHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0603877F1707C669004FF3F2 /* Debug */,
@@ -307,13 +308,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		060387811707C669004FF3F2 /* Build configuration list for PBXNativeTarget "bittrendsHelper" */ = {
+		060387811707C669004FF3F2 /* Build configuration list for PBXNativeTarget "litetrendsHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				060387821707C669004FF3F2 /* Debug */,
 				060387831707C669004FF3F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

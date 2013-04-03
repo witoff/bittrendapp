@@ -18,7 +18,7 @@
     BOOL alreadyRunning = NO;
     NSArray *running = [[NSWorkspace sharedWorkspace] runningApplications];
     for (NSRunningApplication *app in running) {
-        if ([[app bundleIdentifier] isEqualToString:@"com.bittrends.bittrends"]) {
+        if ([[app bundleIdentifier] isEqualToString:@"com.bittrends.litetrends"]) {
             alreadyRunning = YES;
         }
     }
@@ -32,9 +32,9 @@
         [pathComponents removeLastObject];
         [pathComponents removeLastObject];
         [pathComponents addObject:@"MacOS"];
-        [pathComponents addObject:@"bittrends"];
+        [pathComponents addObject:@"litetrends"];
         NSString *newPath = [NSString pathWithComponents:pathComponents];
-        NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSArray arrayWithObject:@"bittrends"], NSWorkspaceLaunchConfigurationArguments, nil];
+        NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSArray arrayWithObject:@"litetrends"], NSWorkspaceLaunchConfigurationArguments, nil];
         [[NSWorkspace sharedWorkspace] launchApplicationAtURL:[NSURL fileURLWithPath:newPath]
                                                       options:NSWorkspaceLaunchWithoutActivation
                                                 configuration:dict
