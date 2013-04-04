@@ -14,6 +14,7 @@
 		0684B09F170BF1A5004E9A49 /* litetrendsHelper.app in Copy Launch Helper */ = {isa = PBXBuildFile; fileRef = 06137548170BE87F00D92119 /* litetrendsHelper.app */; };
 		06876A3D16C6354B00D1C21A /* BtStartAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06876A3C16C6354B00D1C21A /* BtStartAtLoginController.m */; };
 		06876A4016C63EF700D1C21A /* BtMenuDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06876A3F16C63EF700D1C21A /* BtMenuDelegate.m */; };
+		06AA2302170D38330002D59B /* litecoin.png in Resources */ = {isa = PBXBuildFile; fileRef = 06AA2301170D38330002D59B /* litecoin.png */; };
 		0A35A21716CCCA640016F838 /* BtStatusItemViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A35A21616CCCA640016F838 /* BtStatusItemViewControllerTest.m */; };
 		0A35A21916CCCA870016F838 /* BtStartAtLoginControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A35A21816CCCA870016F838 /* BtStartAtLoginControllerTest.m */; };
 		0A50904516BDC409004174E2 /* HelveticaNeueLTStd-Cn.otf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A50904316BDC3DD004174E2 /* HelveticaNeueLTStd-Cn.otf */; };
@@ -103,6 +104,7 @@
 		06876A3C16C6354B00D1C21A /* BtStartAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtStartAtLoginController.m; sourceTree = "<group>"; };
 		06876A3E16C63EF700D1C21A /* BtMenuDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtMenuDelegate.h; sourceTree = "<group>"; };
 		06876A3F16C63EF700D1C21A /* BtMenuDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtMenuDelegate.m; sourceTree = "<group>"; };
+		06AA2301170D38330002D59B /* litecoin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = litecoin.png; sourceTree = "<group>"; };
 		0A35A21616CCCA640016F838 /* BtStatusItemViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtStatusItemViewControllerTest.m; sourceTree = "<group>"; };
 		0A35A21816CCCA870016F838 /* BtStartAtLoginControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtStartAtLoginControllerTest.m; sourceTree = "<group>"; };
 		0A50904316BDC3DD004174E2 /* HelveticaNeueLTStd-Cn.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueLTStd-Cn.otf"; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 		0A59E74C16BD9D2100E3CE3C = {
 			isa = PBXGroup;
 			children = (
+				06AA2301170D38330002D59B /* litecoin.png */,
 				060387841707C669004FF3F2 /* litetrendsHelper.xcodeproj */,
 				06415E421707C3510085BD37 /* ServiceManagement.framework */,
 				060C386216C73BCC00BAE98C /* litetrends.entitlements */,
@@ -503,6 +506,7 @@
 				0A59E76616BD9D2100E3CE3C /* InfoPlist.strings in Resources */,
 				0A59E76C16BD9D2100E3CE3C /* Credits.rtf in Resources */,
 				0657063D16C738F0003CED95 /* 512x512.icns in Resources */,
+				06AA2302170D38330002D59B /* litecoin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
