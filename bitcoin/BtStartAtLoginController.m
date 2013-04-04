@@ -41,7 +41,7 @@
 
 + (void) setStartAtLogin:(NSURL *)itemURL enabled:(BOOL)enabled {
     
-    NSString *bundleId = @"com.bittrends.bittrendsHelper";
+    NSString *bundleId = @"com.bittrends.litetrendsHelper";
     if (SMLoginItemSetEnabled ((__bridge CFStringRef)bundleId,enabled)) {
         logInfo(YES, @"SMLogin succesfully set");
     } else {
