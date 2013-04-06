@@ -10,7 +10,7 @@
 
 @implementation BtceApiController
 
-#define URL @"https://btc-e.com/api/2/ltc_usd/ticker"
+#define URL @"https://btc-e.com/api/2/ppc_btc/ticker"
 
 - (id)initWithDelegate:(NSObject<BtceApiDelegate> *)delegate {
     self = [super init];
@@ -22,9 +22,10 @@
 
 -(void) poll {
     NSURL * url = [NSURL URLWithString:URL];
-    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
+    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:4.0];
     [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPMethod:@"GET"];
+    
     NSURLConnection * connection = [[NSURLConnection alloc]initWithRequest:request delegate:self startImmediately:YES];
     
 }
