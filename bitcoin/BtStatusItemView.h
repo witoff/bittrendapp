@@ -15,6 +15,7 @@
     BOOL _isHighlighted;
     NSStatusItem *_statusItem;
     NSColor *textColor;
+    BOOL _doWarn;
     
 }
 
@@ -27,4 +28,7 @@
 - (void)setLastUpdatedTime:(NSDate *)time;
 - (void)setTextAlpha:(CGFloat)alpha doAnimate:(BOOL)doAnimate;
 
+- (void)setWarning:(BOOL)doWarn;
+- (NSColor*)getTextColor;
+    
 @end

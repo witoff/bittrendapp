@@ -15,10 +15,16 @@
     BtStatusItemViewController *_statusItemViewController;
     BtMtGoxApiController *_mtGoxApiController;
     bool _toggle;
+    int _state;
+    
+    NSDate *_startTime;
+    NSDate *_lastStateChange;
+    NSDate *_lastUpdate;
     
 }
 
 -(void)timerTicked:(NSTimer*)timer;
 -(void)connectToMtGox:(NSTimer*)timer;
+-(void)watchDogTick:(NSTimer*)timer;
 
 @end

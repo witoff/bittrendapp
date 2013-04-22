@@ -25,6 +25,7 @@
     NSMenuItem *_miSell;
     NSMenuItem *_miAlerts;
     NSMenuItem *_miLinks;
+    NSMenuItem *_miDonate;
     NSDictionary *_allSelectableMenuItems;
     
     NSMenuItem *_miStartup;
@@ -37,6 +38,8 @@
 - (id)init;
 - (void)mtGoxDataDidChangeTo:(NSDictionary *)data;
 - (void)toggleStartup;
+- (void)showDonate;
+- (void)copyAddress:(NSAlert *)alert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo;
 - (void)didSelectTickerKey:(id)sender;
 - (void)openUrl:(NSMenuItem*)sender;
 - (NSString*)getTickerKey;
@@ -45,7 +48,7 @@
 - (void)quit;
 
 // Set Text to Red.
-- (void)setWarning;
-- (void)cancelWarning;
+- (void)setWarning:(bool)doWarn;
+- (void)setStatusText:(NSString*)text;
 
 @end

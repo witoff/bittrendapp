@@ -24,7 +24,7 @@
 #import "SocketIO.h"
 #import "SocketIOPacket.h"
 #import "SocketIOJSONSerialization.h"
-
+#import <objc/runtime.h>
 #import "SocketIOTransportWebsocket.h"
 #import "SocketIOTransportXHR.h"
 
@@ -563,6 +563,7 @@ NSString* const SocketIOException = @"SocketIOException";
     }
     
     if ((wasConnected || wasConnecting)) {
+        //NOTE: This line of code is segfaulting.  _delegate is unsafe and apparently some kind of nil'd reference
         if ([_delegate respondsToSelector:@selector(socketIODidDisconnect:disconnectedWithError:)]) {
             [_delegate socketIODidDisconnect:self disconnectedWithError:error];
         }
