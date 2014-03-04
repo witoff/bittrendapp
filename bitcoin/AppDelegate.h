@@ -7,18 +7,6 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "BtStatusItemViewController.h"
-#import "BtMtGoxApiController.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate,BtMtGoxApiDelegate> {
-@private
-    BtStatusItemViewController *_statusItemViewController;
-    BtMtGoxApiController *_mtGoxApiController;
-    bool _toggle;
-    
-}
-
--(void)timerTicked:(NSTimer*)timer;
--(void)connectToMtGox:(NSTimer*)timer;
-
+@interface AppDelegate : NSObject
 @end

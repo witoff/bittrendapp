@@ -15,30 +15,8 @@
 		06876A4016C63EF700D1C21A /* BtMenuDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06876A3F16C63EF700D1C21A /* BtMenuDelegate.m */; };
 		0A35A21716CCCA640016F838 /* BtStatusItemViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A35A21616CCCA640016F838 /* BtStatusItemViewControllerTest.m */; };
 		0A35A21916CCCA870016F838 /* BtStartAtLoginControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A35A21816CCCA870016F838 /* BtStartAtLoginControllerTest.m */; };
-		0A35A21B16CCCAEF0016F838 /* BtMtGoxApiControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A35A21A16CCCAEF0016F838 /* BtMtGoxApiControllerTest.m */; };
 		0A50904516BDC409004174E2 /* HelveticaNeueLTStd-Cn.otf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0A50904316BDC3DD004174E2 /* HelveticaNeueLTStd-Cn.otf */; };
 		0A50904816BDD274004174E2 /* BtStatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50904716BDD274004174E2 /* BtStatusItemView.m */; };
-		0A50907E16BF2343004174E2 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50905316BF2343004174E2 /* NSObject+SBJson.m */; };
-		0A50907F16BF2343004174E2 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50905616BF2343004174E2 /* SBJsonParser.m */; };
-		0A50908016BF2343004174E2 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50905816BF2343004174E2 /* SBJsonStreamParser.m */; };
-		0A50908116BF2343004174E2 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50905A16BF2343004174E2 /* SBJsonStreamParserAccumulator.m */; };
-		0A50908216BF2343004174E2 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50905C16BF2343004174E2 /* SBJsonStreamParserAdapter.m */; };
-		0A50908316BF2343004174E2 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50905E16BF2343004174E2 /* SBJsonStreamParserState.m */; };
-		0A50908416BF2343004174E2 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50906016BF2343004174E2 /* SBJsonStreamWriter.m */; };
-		0A50908516BF2343004174E2 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50906216BF2343004174E2 /* SBJsonStreamWriterAccumulator.m */; };
-		0A50908616BF2343004174E2 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50906416BF2343004174E2 /* SBJsonStreamWriterState.m */; };
-		0A50908716BF2343004174E2 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50906616BF2343004174E2 /* SBJsonTokeniser.m */; };
-		0A50908816BF2343004174E2 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50906816BF2343004174E2 /* SBJsonUTF8Stream.m */; };
-		0A50908916BF2343004174E2 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50906A16BF2343004174E2 /* SBJsonWriter.m */; };
-		0A50908A16BF2343004174E2 /* SocketIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50906C16BF2343004174E2 /* SocketIO.m */; };
-		0A50908B16BF2343004174E2 /* SocketIOJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50906E16BF2343004174E2 /* SocketIOJSONSerialization.m */; };
-		0A50908C16BF2343004174E2 /* SocketIOPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50907016BF2343004174E2 /* SocketIOPacket.m */; };
-		0A50908D16BF2343004174E2 /* SocketIOTransportWebsocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50907316BF2343004174E2 /* SocketIOTransportWebsocket.m */; };
-		0A50908E16BF2343004174E2 /* SocketIOTransportXHR.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50907516BF2343004174E2 /* SocketIOTransportXHR.m */; };
-		0A50908F16BF2343004174E2 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A50907716BF2343004174E2 /* base64.c */; };
-		0A50909016BF2343004174E2 /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50907A16BF2343004174E2 /* NSData+SRB64Additions.m */; };
-		0A50909116BF2343004174E2 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50907C16BF2343004174E2 /* SRWebSocket.m */; };
-		0A50909416BF255C004174E2 /* BtMtGoxApiController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A50909316BF255C004174E2 /* BtMtGoxApiController.m */; };
 		0A59E75C16BD9D2100E3CE3C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A59E75B16BD9D2100E3CE3C /* Cocoa.framework */; };
 		0A59E76616BD9D2100E3CE3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A59E76416BD9D2100E3CE3C /* InfoPlist.strings */; };
 		0A59E76816BD9D2100E3CE3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A59E76716BD9D2100E3CE3C /* main.m */; };
@@ -49,6 +27,8 @@
 		0A59E78316BD9D2100E3CE3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A59E78116BD9D2100E3CE3C /* InfoPlist.strings */; };
 		0A59E78616BD9D2100E3CE3C /* bitcoinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A59E78516BD9D2100E3CE3C /* bitcoinTests.m */; };
 		0AA6491C16BDA6FA00BEE4C9 /* BtStatusItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA6491B16BDA6FA00BEE4C9 /* BtStatusItemViewController.m */; };
+		0AC8705718C59CFF00EB1E07 /* BtBitstampApiController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC8705618C59CFF00EB1E07 /* BtBitstampApiController.m */; };
+		BED7C2342A0D450DAC66AF42 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDCED3142C64F169F7FF1AA /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,55 +84,9 @@
 		06876A3F16C63EF700D1C21A /* BtMenuDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtMenuDelegate.m; sourceTree = "<group>"; };
 		0A35A21616CCCA640016F838 /* BtStatusItemViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtStatusItemViewControllerTest.m; sourceTree = "<group>"; };
 		0A35A21816CCCA870016F838 /* BtStartAtLoginControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtStartAtLoginControllerTest.m; sourceTree = "<group>"; };
-		0A35A21A16CCCAEF0016F838 /* BtMtGoxApiControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtMtGoxApiControllerTest.m; sourceTree = "<group>"; };
 		0A50904316BDC3DD004174E2 /* HelveticaNeueLTStd-Cn.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueLTStd-Cn.otf"; sourceTree = "<group>"; };
 		0A50904616BDD274004174E2 /* BtStatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtStatusItemView.h; sourceTree = "<group>"; };
 		0A50904716BDD274004174E2 /* BtStatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtStatusItemView.m; sourceTree = "<group>"; };
-		0A50905216BF2343004174E2 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
-		0A50905316BF2343004174E2 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
-		0A50905416BF2343004174E2 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
-		0A50905516BF2343004174E2 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
-		0A50905616BF2343004174E2 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
-		0A50905716BF2343004174E2 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
-		0A50905816BF2343004174E2 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParser.m; sourceTree = "<group>"; };
-		0A50905916BF2343004174E2 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
-		0A50905A16BF2343004174E2 /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
-		0A50905B16BF2343004174E2 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
-		0A50905C16BF2343004174E2 /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
-		0A50905D16BF2343004174E2 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
-		0A50905E16BF2343004174E2 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserState.m; sourceTree = "<group>"; };
-		0A50905F16BF2343004174E2 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
-		0A50906016BF2343004174E2 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
-		0A50906116BF2343004174E2 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
-		0A50906216BF2343004174E2 /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
-		0A50906316BF2343004174E2 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
-		0A50906416BF2343004174E2 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
-		0A50906516BF2343004174E2 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
-		0A50906616BF2343004174E2 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
-		0A50906716BF2343004174E2 /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonUTF8Stream.h; sourceTree = "<group>"; };
-		0A50906816BF2343004174E2 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
-		0A50906916BF2343004174E2 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
-		0A50906A16BF2343004174E2 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		0A50906B16BF2343004174E2 /* SocketIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIO.h; sourceTree = "<group>"; };
-		0A50906C16BF2343004174E2 /* SocketIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIO.m; sourceTree = "<group>"; };
-		0A50906D16BF2343004174E2 /* SocketIOJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOJSONSerialization.h; sourceTree = "<group>"; };
-		0A50906E16BF2343004174E2 /* SocketIOJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOJSONSerialization.m; sourceTree = "<group>"; };
-		0A50906F16BF2343004174E2 /* SocketIOPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOPacket.h; sourceTree = "<group>"; };
-		0A50907016BF2343004174E2 /* SocketIOPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOPacket.m; sourceTree = "<group>"; };
-		0A50907116BF2343004174E2 /* SocketIOTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOTransport.h; sourceTree = "<group>"; };
-		0A50907216BF2343004174E2 /* SocketIOTransportWebsocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOTransportWebsocket.h; sourceTree = "<group>"; };
-		0A50907316BF2343004174E2 /* SocketIOTransportWebsocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOTransportWebsocket.m; sourceTree = "<group>"; };
-		0A50907416BF2343004174E2 /* SocketIOTransportXHR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOTransportXHR.h; sourceTree = "<group>"; };
-		0A50907516BF2343004174E2 /* SocketIOTransportXHR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOTransportXHR.m; sourceTree = "<group>"; };
-		0A50907716BF2343004174E2 /* base64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base64.c; sourceTree = "<group>"; };
-		0A50907816BF2343004174E2 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
-		0A50907916BF2343004174E2 /* NSData+SRB64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SRB64Additions.h"; sourceTree = "<group>"; };
-		0A50907A16BF2343004174E2 /* NSData+SRB64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SRB64Additions.m"; sourceTree = "<group>"; };
-		0A50907B16BF2343004174E2 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
-		0A50907C16BF2343004174E2 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
-		0A50907D16BF2343004174E2 /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
-		0A50909216BF255C004174E2 /* BtMtGoxApiController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtMtGoxApiController.h; sourceTree = "<group>"; };
-		0A50909316BF255C004174E2 /* BtMtGoxApiController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtMtGoxApiController.m; sourceTree = "<group>"; };
 		0A59E75716BD9D2100E3CE3C /* bittrends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bittrends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A59E75B16BD9D2100E3CE3C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0A59E75E16BD9D2100E3CE3C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -173,6 +107,10 @@
 		0A59E78516BD9D2100E3CE3C /* bitcoinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bitcoinTests.m; sourceTree = "<group>"; };
 		0AA6491A16BDA6FA00BEE4C9 /* BtStatusItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtStatusItemViewController.h; sourceTree = "<group>"; };
 		0AA6491B16BDA6FA00BEE4C9 /* BtStatusItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtStatusItemViewController.m; sourceTree = "<group>"; };
+		0AC8705518C59CFF00EB1E07 /* BtBitstampApiController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtBitstampApiController.h; sourceTree = "<group>"; };
+		0AC8705618C59CFF00EB1E07 /* BtBitstampApiController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtBitstampApiController.m; sourceTree = "<group>"; };
+		4536955945CF4C9FB3018038 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		6FDCED3142C64F169F7FF1AA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +121,7 @@
 				06415E431707C3510085BD37 /* ServiceManagement.framework in Frameworks */,
 				0682640F16BDAF0800C58306 /* Security.framework in Frameworks */,
 				0A59E75C16BD9D2100E3CE3C /* Cocoa.framework in Frameworks */,
+				BED7C2342A0D450DAC66AF42 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,72 +185,6 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		0A50905016BF2343004174E2 /* SocketIO */ = {
-			isa = PBXGroup;
-			children = (
-				0A50905116BF2343004174E2 /* JSON */,
-				0A50906B16BF2343004174E2 /* SocketIO.h */,
-				0A50906C16BF2343004174E2 /* SocketIO.m */,
-				0A50906D16BF2343004174E2 /* SocketIOJSONSerialization.h */,
-				0A50906E16BF2343004174E2 /* SocketIOJSONSerialization.m */,
-				0A50906F16BF2343004174E2 /* SocketIOPacket.h */,
-				0A50907016BF2343004174E2 /* SocketIOPacket.m */,
-				0A50907116BF2343004174E2 /* SocketIOTransport.h */,
-				0A50907216BF2343004174E2 /* SocketIOTransportWebsocket.h */,
-				0A50907316BF2343004174E2 /* SocketIOTransportWebsocket.m */,
-				0A50907416BF2343004174E2 /* SocketIOTransportXHR.h */,
-				0A50907516BF2343004174E2 /* SocketIOTransportXHR.m */,
-				0A50907616BF2343004174E2 /* SocketRocket */,
-				0A50907D16BF2343004174E2 /* SocketRocket-Prefix.pch */,
-			);
-			path = SocketIO;
-			sourceTree = "<group>";
-		};
-		0A50905116BF2343004174E2 /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				0A50905216BF2343004174E2 /* NSObject+SBJson.h */,
-				0A50905316BF2343004174E2 /* NSObject+SBJson.m */,
-				0A50905416BF2343004174E2 /* SBJson.h */,
-				0A50905516BF2343004174E2 /* SBJsonParser.h */,
-				0A50905616BF2343004174E2 /* SBJsonParser.m */,
-				0A50905716BF2343004174E2 /* SBJsonStreamParser.h */,
-				0A50905816BF2343004174E2 /* SBJsonStreamParser.m */,
-				0A50905916BF2343004174E2 /* SBJsonStreamParserAccumulator.h */,
-				0A50905A16BF2343004174E2 /* SBJsonStreamParserAccumulator.m */,
-				0A50905B16BF2343004174E2 /* SBJsonStreamParserAdapter.h */,
-				0A50905C16BF2343004174E2 /* SBJsonStreamParserAdapter.m */,
-				0A50905D16BF2343004174E2 /* SBJsonStreamParserState.h */,
-				0A50905E16BF2343004174E2 /* SBJsonStreamParserState.m */,
-				0A50905F16BF2343004174E2 /* SBJsonStreamWriter.h */,
-				0A50906016BF2343004174E2 /* SBJsonStreamWriter.m */,
-				0A50906116BF2343004174E2 /* SBJsonStreamWriterAccumulator.h */,
-				0A50906216BF2343004174E2 /* SBJsonStreamWriterAccumulator.m */,
-				0A50906316BF2343004174E2 /* SBJsonStreamWriterState.h */,
-				0A50906416BF2343004174E2 /* SBJsonStreamWriterState.m */,
-				0A50906516BF2343004174E2 /* SBJsonTokeniser.h */,
-				0A50906616BF2343004174E2 /* SBJsonTokeniser.m */,
-				0A50906716BF2343004174E2 /* SBJsonUTF8Stream.h */,
-				0A50906816BF2343004174E2 /* SBJsonUTF8Stream.m */,
-				0A50906916BF2343004174E2 /* SBJsonWriter.h */,
-				0A50906A16BF2343004174E2 /* SBJsonWriter.m */,
-			);
-			path = JSON;
-			sourceTree = "<group>";
-		};
-		0A50907616BF2343004174E2 /* SocketRocket */ = {
-			isa = PBXGroup;
-			children = (
-				0A50907716BF2343004174E2 /* base64.c */,
-				0A50907816BF2343004174E2 /* base64.h */,
-				0A50907916BF2343004174E2 /* NSData+SRB64Additions.h */,
-				0A50907A16BF2343004174E2 /* NSData+SRB64Additions.m */,
-				0A50907B16BF2343004174E2 /* SRWebSocket.h */,
-				0A50907C16BF2343004174E2 /* SRWebSocket.m */,
-			);
-			path = SocketRocket;
-			sourceTree = "<group>";
-		};
 		0A50909516BF3F42004174E2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +204,7 @@
 				0A59E77E16BD9D2100E3CE3C /* bitcoinTests */,
 				0A59E75A16BD9D2100E3CE3C /* Frameworks */,
 				0A59E75816BD9D2100E3CE3C /* Products */,
+				4536955945CF4C9FB3018038 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -346,10 +220,10 @@
 		0A59E75A16BD9D2100E3CE3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0A50905016BF2343004174E2 /* SocketIO */,
 				0A59E75B16BD9D2100E3CE3C /* Cocoa.framework */,
 				0A59E77916BD9D2100E3CE3C /* SenTestingKit.framework */,
 				0A59E75D16BD9D2100E3CE3C /* Other Frameworks */,
+				6FDCED3142C64F169F7FF1AA /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -374,9 +248,8 @@
 				0A59E76D16BD9D2100E3CE3C /* AppDelegate.h */,
 				0A59E76E16BD9D2100E3CE3C /* AppDelegate.m */,
 				0A59E76216BD9D2100E3CE3C /* Supporting Files */,
-				0A50909216BF255C004174E2 /* BtMtGoxApiController.h */,
-				0A50909316BF255C004174E2 /* BtMtGoxApiController.m */,
-				0A35A21A16CCCAEF0016F838 /* BtMtGoxApiControllerTest.m */,
+				0AC8705518C59CFF00EB1E07 /* BtBitstampApiController.h */,
+				0AC8705618C59CFF00EB1E07 /* BtBitstampApiController.m */,
 			);
 			path = bitcoin;
 			sourceTree = "<group>";
@@ -419,11 +292,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A59E78916BD9D2100E3CE3C /* Build configuration list for PBXNativeTarget "bittrends" */;
 			buildPhases = (
+				9723FDC3B6A54217B9DF7665 /* Check Pods Manifest.lock */,
 				0A59E75316BD9D2100E3CE3C /* Sources */,
 				0A59E75416BD9D2100E3CE3C /* Frameworks */,
 				0A59E75516BD9D2100E3CE3C /* Resources */,
 				0A50903E16BDC129004174E2 /* CopyFiles */,
 				0603878A1707C6BE004FF3F2 /* Copy Launch Helper */,
+				C6FA19D3E0C547D0AC0F1176 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -531,6 +406,36 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		9723FDC3B6A54217B9DF7665 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C6FA19D3E0C547D0AC0F1176 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -542,27 +447,7 @@
 				0A59E76F16BD9D2100E3CE3C /* AppDelegate.m in Sources */,
 				0AA6491C16BDA6FA00BEE4C9 /* BtStatusItemViewController.m in Sources */,
 				0A50904816BDD274004174E2 /* BtStatusItemView.m in Sources */,
-				0A50907E16BF2343004174E2 /* NSObject+SBJson.m in Sources */,
-				0A50907F16BF2343004174E2 /* SBJsonParser.m in Sources */,
-				0A50908016BF2343004174E2 /* SBJsonStreamParser.m in Sources */,
-				0A50908116BF2343004174E2 /* SBJsonStreamParserAccumulator.m in Sources */,
-				0A50908216BF2343004174E2 /* SBJsonStreamParserAdapter.m in Sources */,
-				0A50908316BF2343004174E2 /* SBJsonStreamParserState.m in Sources */,
-				0A50908416BF2343004174E2 /* SBJsonStreamWriter.m in Sources */,
-				0A50908516BF2343004174E2 /* SBJsonStreamWriterAccumulator.m in Sources */,
-				0A50908616BF2343004174E2 /* SBJsonStreamWriterState.m in Sources */,
-				0A50908716BF2343004174E2 /* SBJsonTokeniser.m in Sources */,
-				0A50908816BF2343004174E2 /* SBJsonUTF8Stream.m in Sources */,
-				0A50908916BF2343004174E2 /* SBJsonWriter.m in Sources */,
-				0A50908A16BF2343004174E2 /* SocketIO.m in Sources */,
-				0A50908B16BF2343004174E2 /* SocketIOJSONSerialization.m in Sources */,
-				0A50908C16BF2343004174E2 /* SocketIOPacket.m in Sources */,
-				0A50908D16BF2343004174E2 /* SocketIOTransportWebsocket.m in Sources */,
-				0A50908E16BF2343004174E2 /* SocketIOTransportXHR.m in Sources */,
-				0A50908F16BF2343004174E2 /* base64.c in Sources */,
-				0A50909016BF2343004174E2 /* NSData+SRB64Additions.m in Sources */,
-				0A50909116BF2343004174E2 /* SRWebSocket.m in Sources */,
-				0A50909416BF255C004174E2 /* BtMtGoxApiController.m in Sources */,
+				0AC8705718C59CFF00EB1E07 /* BtBitstampApiController.m in Sources */,
 				06876A3D16C6354B00D1C21A /* BtStartAtLoginController.m in Sources */,
 				06876A4016C63EF700D1C21A /* BtMenuDelegate.m in Sources */,
 			);
@@ -575,7 +460,6 @@
 				0A59E78616BD9D2100E3CE3C /* bitcoinTests.m in Sources */,
 				0A35A21716CCCA640016F838 /* BtStatusItemViewControllerTest.m in Sources */,
 				0A35A21916CCCA870016F838 /* BtStartAtLoginControllerTest.m in Sources */,
-				0A35A21B16CCCAEF0016F838 /* BtMtGoxApiControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,12 +558,17 @@
 		};
 		0A59E78A16BD9D2100E3CE3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4536955945CF4C9FB3018038 /* Pods.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = bittrends.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bitcoin/bittrends-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/libPusher\"",
+				);
 				INFOPLIST_FILE = bitcoin/bittrends.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = bittrends;
@@ -689,13 +578,18 @@
 		};
 		0A59E78B16BD9D2100E3CE3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4536955945CF4C9FB3018038 /* Pods.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = bittrends.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bitcoin/bittrends-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/SocketRocket\"",
+					"\"${PODS_ROOT}/Headers/libPusher\"",
+				);
 				INFOPLIST_FILE = bitcoin/bittrends.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = bittrends;

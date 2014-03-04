@@ -10,7 +10,29 @@
 #import "BtStartAtLoginController.h"
 #import "BTMenuDelegate.h"
 
-@implementation BtStatusItemViewController
+@implementation BtStatusItemViewController {
+    NSStatusItem *_statusItem;
+    BtStatusItemView *_statusItemView;
+    NSDictionary *_lastPriceData;
+    NSMenu *_menu;
+    id _menuDelegate;
+    NSMenuItem *_miLastUpdated;
+    
+    NSMenuItem *_miLow;
+    NSMenuItem *_miHigh;
+    NSMenuItem *_miBuy;
+    NSMenuItem *_miLast;
+    NSMenuItem *_miSell;
+    NSMenuItem *_miAlerts;
+    NSMenuItem *_miLinks;
+    NSDictionary *_allSelectableMenuItems;
+    
+    NSMenuItem *_miStartup;
+    NSTimer *_lastUpdatedTimer;
+    NSDate *_priceLastUpdated;
+    
+    NSDictionary *_links;
+}
 
 - (id)init {
     self = [super init];
@@ -40,7 +62,8 @@
                                                 action:nil keyEquivalent:@""];
     [_menu addItem:_miLastUpdated];
     [_menu addItem:[NSMenuItem separatorItem]];
-    
+
+#if 0 // TODO Re-enable this at some point?
     /* TICKER VALUES */
     _miBuy = [[NSMenuItem alloc] initWithTitle:@"Buy: ..."
                                         action:@selector(didSelectTickerKey:) keyEquivalent:@""];
@@ -72,7 +95,8 @@
     [_menu addItem:[NSMenuItem separatorItem]];
     _allSelectableMenuItems = qDict(_miBuy, @"buy", _miLast, @"last", _miSell, @"sell", _miLow, @"low", _miHigh, @"high");
     [self checkDisplayed];
-    
+#endif
+
     /* Extras */
     /*
      _miAlerts = [[NSMenuItem alloc] initWithTitle:@"Alerts" action:@selector(toggleStartup) keyEquivalent:@""];
@@ -113,8 +137,7 @@
 
 - (NSMenuItem*)getLinkMenu {
     _links = qDict(@"http://www.coinbase.com", @"Coinbase",
-                   @"http://www.mtgox.com", @"MtGox",
-                   @"http://mtgoxlive.com/orders)", @"MtGox Live",
+                   @"http://www.bitstamp.com", @"Bitstamp",
                    @"http://bitcoincharts.com/charts/mtgoxUSD#rg10zig5-minztgSzbgBza1gEMAzm1g10za2gEMAzm2g25zv", @"Bitcoin Charts",
                    @"http://blockchain.info/stats", @"Blockchain.info - Stats");
     
@@ -145,8 +168,6 @@
     }
 }
 
-
-
 - (void)didSelectTickerKey:(NSMenuItem*)sender {
     logInfo(YES, @"displayed: %@", sender.title);
     
@@ -171,9 +192,13 @@
 }
 
 - (NSString*)getTickerKey {
+#if 0 // TODO Re-enable this at some point?
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString* selected = [defaults valueForKey:@"SELECTED_TICKER"];
     return selected ? selected : @"last";
+#else
+    return @"price";
+#endif
 }
 
 - (void)toggleStartup {
@@ -204,6 +229,23 @@
 
 - (void)quit {
     [NSApp terminate:self];
+}
+
+- (void)bitstampDataDidChangeTo:(NSDictionary *)newData {
+    _priceLastUpdated = [[NSDate alloc] init];
+    [_statusItemView setLastUpdatedTime:_priceLastUpdated];
+
+    /* UPDATE STATUS BAR */
+    NSNumber *oldPrice = _lastPriceData[[self getTickerKey]];
+    NSNumber *newPrice = newData[[self getTickerKey]];
+    _lastPriceData = [newData copy];  //TODO: Deep Copy
+
+    if (![oldPrice isEqual:newPrice]) {
+        [self updateStatusItem];
+    }
+    else {
+        logInfo(YES, @"not updated!!\n\n");
+    }
 }
 
 - (void)mtGoxDataDidChangeTo:(NSDictionary *)newData {
@@ -263,7 +305,7 @@
         NSDate *now = [[NSDate alloc] init];
         float deltaSeconds = [now timeIntervalSinceDate:_priceLastUpdated];
         _miLastUpdated.title =
-        [NSString stringWithFormat:@"Updated %.1fs ago", deltaSeconds];
+        [NSString stringWithFormat:@"Updated %.1fs ago from Bitstamp", deltaSeconds];
     }
 }
 
