@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import <Cocoa/Cocoa.h>
+
 #import "BtBitstampApiController.h"
 #import "BtStatusItemViewController.h"
 

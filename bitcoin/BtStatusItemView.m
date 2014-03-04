@@ -19,6 +19,7 @@
         _lastUpdated = [[NSDate alloc] init];
         _isHighlighted = NO;
         _statusItem = item;
+        _doWarn = NO;
         
         _textField = [[NSTextField alloc] init];
         [_textField setEditable:NO];
@@ -27,7 +28,7 @@
         [_textField setBezeled:NO];
         [_textField setBackgroundColor:[NSColor clearColor]];
         [_textField setFont:[NSFont menuBarFontOfSize:0]];
-        self.textColor = [NSColor blackColor];
+        self.textColor = [self getTextColor];
         
         [self addSubview:_textField];
         [self setPrice:[priceData valueForKey:@"last"]];
@@ -62,9 +63,25 @@
         [[NSColor selectedMenuItemColor] set];
         [NSBezierPath fillRect:rect];
     } else {
-        [_textField setTextColor:self.textColor];
+        [_textField setTextColor:[self getTextColor]];
         [super drawRect: rect];
     }
+}
+
+- (void)setWarning:(BOOL)doWarn {
+    if (doWarn != _doWarn) {
+        _doWarn = doWarn;
+        self.textColor = [self getTextColor];
+        [self setNeedsDisplay:YES];
+    }
+
+}
+
+-(NSColor*)getTextColor {
+    if (_doWarn)
+         return [NSColor redColor];
+    else
+        return [NSColor blackColor];
 }
 
 - (void)setLastUpdatedTime:(NSDate *)time {

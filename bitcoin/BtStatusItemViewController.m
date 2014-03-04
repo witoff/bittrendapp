@@ -10,6 +10,9 @@
 #import "BtStartAtLoginController.h"
 #import "BTMenuDelegate.h"
 
+@interface BtStatusItemViewController()<NSMenuDelegate>
+@end
+
 @implementation BtStatusItemViewController {
     NSStatusItem *_statusItem;
     BtStatusItemView *_statusItemView;
@@ -25,6 +28,7 @@
     NSMenuItem *_miSell;
     NSMenuItem *_miAlerts;
     NSMenuItem *_miLinks;
+    NSMenuItem *_miDonate;
     NSDictionary *_allSelectableMenuItems;
     
     NSMenuItem *_miStartup;
@@ -58,7 +62,7 @@
     [_menu setDelegate:self];
     
     /* LAST UPDATED */
-    _miLastUpdated = [[NSMenuItem alloc] initWithTitle:@"Connecting..."
+    _miLastUpdated = [[NSMenuItem alloc] initWithTitle:@"Connecting To MtGox..."
                                                 action:nil keyEquivalent:@""];
     [_menu addItem:_miLastUpdated];
     [_menu addItem:[NSMenuItem separatorItem]];
@@ -123,6 +127,13 @@
         [_miStartup setState:NSOffState];
     [_menu addItem:_miStartup];
     
+    /* DONATE */
+    _miDonate = [[NSMenuItem alloc] initWithTitle:@"Donate BTC"
+                                           action:@selector(showDonate)
+                                    keyEquivalent:@""];
+    [_miDonate setTarget:self];
+    [_menu addItem:_miDonate];
+    [_menu addItem:[NSMenuItem separatorItem]];    
     /* QUIT */
     NSMenuItem *miQuit = [[NSMenuItem alloc] initWithTitle:@"Quit"
                                                     action:@selector(quit)
@@ -135,6 +146,31 @@
     [_statusItem setMenu:_menu];
 }
 
+//#define ADDRESS ""
+NSString *const ADDRESS = @"1MiVRnNQenPc7cswM7zCuGEx9CDjQDnyJM";
+
+- (void)showDonate {
+    logInfo(@"showing donate");
+
+    NSString *txt = [NSString stringWithFormat:@"If you enjoy this app, please consider a donation:\n%@", ADDRESS];
+    
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:@"Thanks for Supporting Us!"];
+    [alert setInformativeText:txt];
+    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:@"Copy To Clipboard"];
+
+    [alert beginSheetModalForWindow:nil modalDelegate:self didEndSelector:@selector(copyAddress:returnCode:contextInfo:) contextInfo:nil];
+}
+- (void)copyAddress:(NSAlert *)alert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo {
+    
+    if (returnCode==1001) {
+        logInfo(@"copying to clipboard");
+        NSPasteboard *pasteBoard = [NSPasteboard generalPasteboard];
+        [pasteBoard declareTypes:[NSArray arrayWithObjects:NSStringPboardType, nil] owner:nil];
+        [pasteBoard setString: ADDRESS forType:NSStringPboardType];
+    }
+}
 - (NSMenuItem*)getLinkMenu {
     _links = qDict(@"http://www.coinbase.com", @"Coinbase",
                    @"http://www.bitstamp.com", @"Bitstamp",
@@ -272,20 +308,10 @@
     }
 }
 
-- (void)setWarning {
+- (void)setWarning:(bool)doWarn {
     logInfo(1, @"Setting Warning");
-    
-    // Set text Red.
-    _statusItemView.textColor = [NSColor redColor];
-    [_statusItemView setNeedsDisplay:YES];
-    
-}
-- (void)cancelWarning {
-    logInfo(1, @"Canceling Warning");
-    
-    // Canceling Warning.
-    _statusItemView.textColor = [NSColor blackColor];
-    [_statusItemView setNeedsDisplay:YES];
+    [_statusItemView setWarning:doWarn];
+
 }
 
 - (void)updateStatusItem {
@@ -294,18 +320,23 @@
     [_statusItemView setNeedsDisplay:YES];
 }
 
+-(void)setStatusText:(NSString*)text {
+    logInfo(@"setting status text to: %@", text);
+    _miLastUpdated.title = text;
+}
+
 #pragma mark Private Methods
 
 - (void)updateUpdatedLastMenuText {
     if (!_priceLastUpdated) {
-        _miLastUpdated.title = @"Connecting....";
+        //if (_miLastUpdated.title == nil)
+            //[self setStatusText:@"Connecting to MtGox..."];
         
     }
     else {
         NSDate *now = [[NSDate alloc] init];
         float deltaSeconds = [now timeIntervalSinceDate:_priceLastUpdated];
-        _miLastUpdated.title =
-        [NSString stringWithFormat:@"Updated %.1fs ago from Bitstamp", deltaSeconds];
+        [self setStatusText:[NSString stringWithFormat:@"Updated %.1fs ago from Bitstamp", deltaSeconds]];
     }
 }
 
