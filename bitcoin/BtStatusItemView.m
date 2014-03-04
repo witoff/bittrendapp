@@ -97,8 +97,10 @@
     logInfo(1, @"Setting tooltip to: %@", updated);
 }
 
-- (void)setPrice:(NSString *)price {
-    NSString *formatted = [NSString stringWithFormat:@"%@/฿", price];
+- (void)setPrice:(NSNumber *)price {
+    NSNumberFormatter *fmt = [[NSNumberFormatter alloc] init];
+    [fmt setFormat:@"0.##"];
+    NSString *formatted = [NSString stringWithFormat:@"%@/฿", [fmt stringFromNumber:price]];
     NSLog(@"Setting status item text to \"%@\"", formatted);
     [_textField setStringValue:formatted];
     [self sizeToFit];

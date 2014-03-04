@@ -22,7 +22,7 @@
 @property (nonatomic, retain) NSColor *textColor;
 
 - (id)initWithPriceData:(NSDictionary *)priceData andStatusItem:(NSStatusItem*)item;
-- (void)setPrice:(NSString *)price;
+- (void)setPrice:(NSNumber *)price;
 - (void)sizeToFit;
 - (void)setHighlight:(BOOL)isHighlighted;
 - (void)setLastUpdatedTime:(NSDate *)time;
